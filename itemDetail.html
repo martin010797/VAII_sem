@@ -2,9 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Item detail</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/item_detail_style.css">
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand text-info justify-content-center" href="#">What to watch</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar, #rightSideBar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">Movies</a>
+            </li>
+            <li class="nav-item">
+                <a class=" nav-link " href="#">Series</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="rightSideBar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">Sign in</a>
+            </li>
+            <li class="nav-item">
+                <a class=" nav-link text-light" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class=" nav-link text-light" href="#">FAQ</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="container">
+    <div class="row bg-secondary text-light">
+        <div class="col-sm-3 border pt-3">
+            <img src="images/hp6thumbnail.jpeg" class="img-thumbnail" alt="Cinque Terre">
+            <p>Release date: 2009</p>
+            <p>Duration: 2h 33m</p>
+            <p>Tags: Fantasy, Action, Mystery, Adventure
+            </p>
+        </div>
+        <div class="col-sm-7 bg-dark border pt-3">
+            <h3 style="color: dodgerblue">
+                Harry Potter and Half blood prince
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet nisi metus. In hac habitasse platea
+                dictumst. Maecenas sit amet euismod diam. Fusce eu auctor tortor, sit amet ornare lectus. In hendrerit
+                mi ex, at molestie dui commodo quis. In iaculis, arcu a interdum interdum, mi quam facilisis odio, eu
+                aliquet eros elit sed odio. Donec quis facilisis mi. Maecenas ut est elit. Pellentesque condimentum
+                lectus et lorem porttitor pellentesque. Integer molestie turpis consectetur, porta mi sit amet, lobortis
+                mi. Proin porttitor cursus vestibulum.
+            <p/>
+
+            <p>Duis lacus erat, pellentesque eu porta consequat, lobortis vel ante. Proin semper pretium neque quis
+                consectetur. Donec vitae velit neque. Phasellus lacinia tortor tempor posuere lacinia. Integer non
+                tincidunt nisl, non tincidunt urna. Fusce non mollis ligula. Duis felis arcu, porta vitae tempor ut,
+                consequat a augue. Integer faucibus ex metus, id viverra ipsum posuere quis. Vestibulum consequat
+                imperdiet lectus, efficitur sodales massa finibus at. Mauris vel risus laoreet orci maximus sagittis id
+                vel sem. Aliquam id lobortis eros. Donec a posuere ipsum. Nulla semper eleifend finibus. Nunc a
+                efficitur odio, sed finibus nisl.
+            <p/>
+
+            <p>Aenean hendrerit malesuada lacinia. In gravida mi ac diam euismod pellentesque. Phasellus consectetur
+                sapien eget ultrices ultrices. Nulla mattis, quam at.
+            </p>
+        </div>
+        <div class="col-sm-2 border pt-3 text-center pb-3">
+            <h3>Rating</h3>
+            <h2 style="color: orangered">86%</h2>
+            <button type="button" class="btn btn-success ">Add to my list</button>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
