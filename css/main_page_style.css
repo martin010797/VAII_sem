@@ -1,0 +1,19 @@
+body{
+    background-color: lightgrey;
+}
+.jumbotron{
+    margin-top:55px;
+    margin-bottom: 0;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding-top: 32px;
+    padding-bottom: 20px;
+    background-color: skyblue;
+}
+
+@media only screen and (max-width: 600px) {
+    .jumbotron{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
