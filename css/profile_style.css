@@ -1,6 +1,12 @@
 body{
     background-color: lightgray;
 }
+a{
+    color: white;
+}
+a:hover{
+    color: black;
+}
 .container{
     margin-top:100px;
 }

@@ -1,6 +1,12 @@
 body{
     background-color: lightgrey;
 }
+a{
+    color: white;
+}
+a:hover{
+    color: black;
+}
 .jumbotron{
     margin-top:55px;
     margin-bottom: 0;
