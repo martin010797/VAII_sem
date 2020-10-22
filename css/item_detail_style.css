@@ -1,6 +1,9 @@
 body{
     background-color: lightgray;
 }
+.navbar .navbar-brand{
+    color: dodgerblue;
+}
 .container{
     margin-top:100px;
 }

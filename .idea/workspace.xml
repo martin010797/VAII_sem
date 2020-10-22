@@ -12,12 +12,19 @@
   <component name="ChangeListManager">
     <list default="true" id="8030f726-ca73-464f-b35f-faa263d49fa3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/item_detail_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/item_detail_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login_reg_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login_reg_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/mainPageStyle.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main_page_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main_page_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/profile_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/profile_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/itemDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/itemDetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainPage.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies.html" beforeDir="false" afterPath="$PROJECT_DIR$/movies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myMovies.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/registration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +67,9 @@
       <updated>1602613398872</updated>
       <workItem from="1602613400442" duration="10870000" />
       <workItem from="1602764534790" duration="18248000" />
-      <workItem from="1602942844809" duration="12013000" />
+      <workItem from="1602942844809" duration="15745000" />
+      <workItem from="1603279445889" duration="7000" />
+      <workItem from="1603373571832" duration="2880000" />
     </task>
     <servers />
   </component>
@@ -78,5 +87,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603374770610">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1603374770610" />
   </component>
 </project>

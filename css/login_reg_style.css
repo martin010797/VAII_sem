@@ -16,3 +16,6 @@ body{
         width: 350px;
     }
 }
+.navbar .navbar-brand{
+    color: dodgerblue;
+}

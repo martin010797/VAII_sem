@@ -1,6 +1,16 @@
 body{
     background-color: lightgrey;
 }
+.navbar .navbar-brand{
+    color: dodgerblue;
+}
+.form-inline .btn{
+    background-color: dodgerblue;
+}
+img{
+    max-height: 250px;
+    width: auto;
+}
 a{
     color: white;
 }
