@@ -1,0 +1,17 @@
+body{
+    background-color: lightgray;
+}
+.navbar .navbar-brand{
+    color: dodgerblue;
+}
+.container{
+    margin-top:80px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 770px) {
+    .container{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}

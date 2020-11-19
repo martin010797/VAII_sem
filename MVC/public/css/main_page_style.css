@@ -1,0 +1,40 @@
+body{
+    background-color: lightgrey;
+}
+.navbar .navbar-brand{
+    color: dodgerblue;
+}
+.form-inline .btn{
+    background-color: dodgerblue;
+}
+img{
+    max-height: 250px;
+    width: auto;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: black;
+}
+.jumbotron{
+    margin-top:20px;
+    margin-bottom: 0;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding-top: 32px;
+    padding-bottom: 20px;
+    background-color: skyblue;
+}
+
+@media only screen and (max-width: 600px) {
+    .jumbotron{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+img{
+    max-height: 250px;
+    width: auto;
+}

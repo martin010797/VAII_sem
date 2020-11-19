@@ -79,15 +79,15 @@ $movies = $storage->loadRecentlyAdded();
         foreach ($movies as $movie) {
             echo '<div class="col-md border pt-3">';
             //echo '<img src="images/hp6thumbnail.jpeg" class="img-thumbnail" alt="Cinque Terre">';
-            if (is_null($movie->getImage())){
-                echo '<img src="images/no_image.png" class="img-thumbnail" alt="Cinque Terre">';
-            }else{
+            if (is_null($movie->getImage())) {
+                echo '<img src="../mvc-master/public/images/no_image.png" class="img-thumbnail" alt="Cinque Terre">';
+            } else {
                 echo '<img src=data:image;base64,' . $movie->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
             }
             echo '<h3><a href="#">' . $movie->getTitle() . '</a>';
             echo '</h3>';
             //echo '<p>' . $movie->getDescription() . '</p>' ;
-            echo '<p>' . substr($movie->getDescription(), 0, 380) . '...</p>' ;
+            echo '<p>' . substr($movie->getDescription(), 0, 380) . '...</p>';
             echo "</div>";
 
         }
@@ -102,20 +102,24 @@ $movies = $storage->loadRecentlyAdded();
 
     <div class="row bg-secondary text-light">
         <div class="col-md border pt-3">
-            <img src="images/breakingBad.jpeg" class="img-thumbnail" alt="Cinque Terre">
+            <img src="../mvc-master/public/images/breakingBad.jpeg" class="img-thumbnail" alt="Cinque Terre">
             <h3><a href="#">Breaking bad</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed massa sit amet justo tristique interdum eget ac
-                est. In quis tortor non est convallis porta. Maecenas ut faucibus lacus. Vestibulum ac arcu imperdiet, volutpat
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed massa sit amet justo tristique
+                interdum eget ac
+                est. In quis tortor non est convallis porta. Maecenas ut faucibus lacus. Vestibulum ac arcu imperdiet,
+                volutpat
                 justo a, malesuada elit.
             </p>
         </div>
         <div class="col-md border pt-3">
-            <img src="images/13r.jpeg" class="img-thumbnail" alt="Cinque Terre">
+            <img src="../mvc-master/public/images/13r.jpeg" class="img-thumbnail" alt="Cinque Terre">
             <h3><a href="#">13 reasons why</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed massa sit amet justo tristique interdum eget ac
-                est. In quis tortor non est convallis porta. Maecenas ut faucibus lacus. Vestibulum ac arcu imperdiet, volutpat
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed massa sit amet justo tristique
+                interdum eget ac
+                est. In quis tortor non est convallis porta. Maecenas ut faucibus lacus. Vestibulum ac arcu imperdiet,
+                volutpat
                 justo a, malesuada elit.
             </p>
         </div>

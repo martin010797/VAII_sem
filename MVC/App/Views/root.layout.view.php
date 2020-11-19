@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>WtW</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -12,19 +14,19 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="css/login_reg_style.css">
+    <!--<link rel="stylesheet" href="../../public/css/main_page_style.css">-->
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top shadow">
-    <a class="navbar-brand" href="#">What to watch</a>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand justify-content-center" href="?c=Home">What to watch</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar, #rightSideBar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-light" href="#">Home</a>
+                <a class="nav-link text-light" href="?c=Home">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-light" href="#">Movies</a>
@@ -32,10 +34,17 @@
             <li class="nav-item">
                 <a class=" nav-link text-light" href="#">Series</a>
             </li>
+            <li class="nav-item">
+                <a class=" nav-link text-light" href="?c=Home&a=Insert">Insert item</a>
+            </li>
         </ul>
     </div>
 
     <div class="collapse navbar-collapse" id="rightSideBar">
+        <form id="searchBar" class="form-inline" action="#">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-info" type="submit">Search</button>
+        </form>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link text-light" href="#">Sign up</a>
@@ -51,15 +60,10 @@
 
 </nav>
 
-<div id="loginRegContainer" class="container shadow-lg">
-    <h2 class="text-center">Login</h2>
-    <form class="form-group">
-        <input type="text" class="form-control mb-2" placeholder="Email">
-        <input type="text" class="form-control mb-3" placeholder="Password">
-        <button type="submit" class="btn btn-primary mb-1 shadow">Login</button>
-        <button type="button" class="btn btn-link btn-block p-0 text-right" style="color: black">Forgot your password?</button>
-        <button type="button" class="btn btn-link btn-block p-0 m-0 text-right" style="color: black">Don't have an account?</button>
-    </form>
+
+
+<div class="web-content pt-5">
+    <?= $contentHTML ?>
 </div>
 
 </body>

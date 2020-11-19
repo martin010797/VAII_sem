@@ -12,8 +12,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="css/main_page_style.css">
-</head>
+    <link rel="stylesheet" href="css/main_page_style.css"></head>
 <body>
 
 <?php
@@ -75,6 +74,9 @@ $storage = new DBStorage();
     <br/>
         <input type="text" name="title" placeholder="Vloz nadpis" >
         <input type="text" name="description" placeholder="Vloz text" >
+        <input type="text" name="duration" placeholder="Vloz dlzku trvania" >
+        <input type="radio" name="type" value="m">Movie
+        <input type="radio" name="type" value="s">Series
         <input type="file" name="image" />
 
         <br/><br/>
@@ -95,7 +97,9 @@ $storage = new DBStorage();
             $image= base64_encode($image);
             $title= $_POST["title"];
             $description= $_POST["description"];
-            $storage->save(new MovieInfo($title, $description, $image));
+            $duration= $_POST["duration"];
+            $storage->save(new MovieInfo($title, $description, $image, $duration));
+            //if ($_POST['type'] == 'm') pre film
             //save image
         //}
     }

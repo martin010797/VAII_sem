@@ -1,0 +1,23 @@
+body{
+    background-color: lightgray;
+}
+.navbar .navbar-brand{
+    color: dodgerblue;
+}
+.navbar .navbar-brand{
+    color: dodgerblue;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: black;
+}
+.container{
+    margin-top:100px;
+    margin-bottom: 50px;
+}
+img{
+    max-height: 170px;
+    width: auto;
+}

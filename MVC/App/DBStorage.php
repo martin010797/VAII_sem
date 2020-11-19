@@ -1,5 +1,8 @@
 <?php
 
+namespace App;
+
+use PDO;
 
 class DBStorage
 {
@@ -30,15 +33,6 @@ class DBStorage
 
     function loadRecentlyAdded()
     {
-        /*$movies = [];
-        $dbMovies = $this->db->query('SELECT * FROM (
-    SELECT * FROM movie_test ORDER BY id DESC LIMIT 5
-) sub
-ORDER BY id DESC');
-        foreach ($dbMovies as $movie) {
-            $movies[] = new MovieInfo($movie['title'], $movie['description'], $movie['image']);
-        }
-        return $movies;*/
         $movies = [];
         $dbMovies = $this->db->query('SELECT * FROM (
     SELECT * FROM item JOIN movie USING (item_id) ORDER BY item_id DESC LIMIT 5
@@ -53,9 +47,6 @@ ORDER BY item_id DESC');
     function save(MovieInfo $movieInfo)
     {
         try {
-            //$sql = 'INSERT INTO movie(title, description, image) VALUES (?, ?, ?)';
-            //$this->db->prepare($sql)->execute([$movieInfo->getTitle(), $movieInfo->getDescription(), $movieInfo->getImage()]);
-
 
             //for movie
             $sql = 'INSERT INTO item(title, description, image) VALUES (?, ?, ?)';

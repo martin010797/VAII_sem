@@ -1,12 +1,16 @@
 <?php
 
+namespace App;
 
-class MovieInfo
+use App\Core\Model;
+
+class MovieInfo extends Model
 {
-    private $title;
-    private $description;
-    private $image;
-    private $duration;
+    protected $item_id;
+    protected $title;
+    protected $description;
+    protected $image;
+    protected $duration;
 
     /**
      * @return mixed
@@ -24,7 +28,7 @@ class MovieInfo
         $this->duration = $duration;
     }
 
-    public function __construct($title, $description, $image, $duration)
+    public function __construct($title = "", $description = "", $image = "", $duration = "")
     {
         $this->title = $title;
         $this->description = $description;
@@ -80,6 +84,34 @@ class MovieInfo
         $this->description = $description;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->item_id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($item_id): void
+    {
+        $this->item_id = $item_id;
+    }
+
+
+    static public function setDbColumns()
+    {
+        //return ['id', 'title', 'description', 'image'];
+        return ['item_id', 'title', 'description', 'image', 'release_date', 'movie_id', 'duration'];
+    }
+
+    static public function setTableName()
+    {
+        //return "movie_test";
+        return "item JOIN movie USING (item_id)";
+    }
 
 
 }
