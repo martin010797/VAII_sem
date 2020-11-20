@@ -11,6 +11,7 @@ class MovieInfo extends Model
     protected $description;
     protected $image;
     protected $duration;
+    protected $type;
 
     /**
      * @return mixed
@@ -34,6 +35,15 @@ class MovieInfo extends Model
         $this->description = $description;
         $this->image = $image;
         $this->duration = $duration;
+        $this->type = "m";
+    }
+
+    /**
+     * @return string
+     */
+    public function getType(): string
+    {
+        return $this->type;
     }
 
     /**

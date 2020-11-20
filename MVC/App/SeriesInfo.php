@@ -12,6 +12,23 @@ class SeriesInfo extends Model
     protected $description;
     protected $image;
     protected $number_of_seasons;
+    protected $type;
+
+    /**
+     * @param mixed $item_id
+     */
+    public function setItemId($item_id): void
+    {
+        $this->item_id = $item_id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType(): string
+    {
+        return $this->type;
+    }
 
     public function __construct($title = "", $description = "", $image = "", $numberOfSeasons = "")
     {
@@ -19,6 +36,7 @@ class SeriesInfo extends Model
         $this->description = $description;
         $this->image = $image;
         $this->number_of_seasons = $numberOfSeasons;
+        $this->type = "s";
     }
 
     /**

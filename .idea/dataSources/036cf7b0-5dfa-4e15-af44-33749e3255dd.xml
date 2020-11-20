@@ -1100,7 +1100,7 @@
     </column>
     <column id="349" parent="336" name="image">
       <Position>4</Position>
-      <DataType>blob|0s</DataType>
+      <DataType>longblob|0s</DataType>
     </column>
     <column id="350" parent="336" name="release_date">
       <Position>5</Position>
@@ -1201,7 +1201,7 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="371" parent="340" name="number_of_series">
+    <column id="371" parent="340" name="number_of_seasons">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
     </column>

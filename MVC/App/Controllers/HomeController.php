@@ -14,14 +14,17 @@ class HomeController extends AControllerBase
     {
 
         $allItems = [];
-        $allItems['movie'] = MovieInfo::getAll();
-        $allItems['series'] = SeriesInfo::getAll();
+        //$allItems['movie'] = MovieInfo::getAll();
+        $allItems['movie'] = MovieInfo::getRecentlyAddedItems();
+        //$allItems['series'] = SeriesInfo::getAll();
+        $allItems['series'] = SeriesInfo::getRecentlyAddedItems();
         return $allItems;
     }
 
     public function insert()
     {
         if (isset($_POST['submit'])) {
+
             $image = addslashes($_FILES['image']['tmp_name']);
             $image = file_get_contents($image);
             $image = base64_encode($image);
@@ -40,10 +43,9 @@ class HomeController extends AControllerBase
                 $series = new SeriesInfo($title, $description, $image, $numberOfSeasons);
                 $series->saveSeries();
             }
-            header("Location: http://localhost/mvc-master?c=Home");
+            header("Location: http://localhost/VAII_sem/MVC?c=Home");
             die();
         }
-
     }
 
 

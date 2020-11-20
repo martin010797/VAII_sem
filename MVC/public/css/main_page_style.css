@@ -1,6 +1,9 @@
 body{
     background-color: lightgrey;
 }
+footer{
+    background-color: skyblue;
+}
 .navbar .navbar-brand{
     color: dodgerblue;
 }

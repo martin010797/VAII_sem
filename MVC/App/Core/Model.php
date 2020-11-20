@@ -89,17 +89,41 @@ abstract class Model
             throw new \Exception('Query failed: ' . $e->getMessage());
         }
     }
+    static public function getRecentlyAddedItems(){
+        self::connect();
+        try {
+            //$stmt = self::$db->query("SELECT * FROM " . self::getTableName());
+            $stmt = self::$db->query("SELECT * FROM (
+    SELECT * FROM " . self::getTableName() . " ORDER BY item_id DESC LIMIT 5
+) sub
+ORDER BY item_id DESC");
+            $dbModels = $stmt->fetchAll();
+            $models = [];
+            foreach ($dbModels as $model) {
+                $tmpModel = new static();
+                $data = array_fill_keys(self::getDbColumns(), null);
+                foreach ($data as $key => $item) {
+                    $tmpModel->$key = $model[$key];
+                }
+                $models[] = $tmpModel;
+            }
+            return $models;
+        } catch (PDOException $e) {
+            throw new \Exception('Query failed: ' . $e->getMessage());
+        }
+    }
 
+    //function changed by adding parameter for id column name
     /**
      * Gets one model by primary key
      * @param $id
      * @throws \Exception
      */
-    static public function getOne($id)
+    static public function getOne($id , $columnName)
     {
         self::connect();
         try {
-            $sql = "SELECT * FROM " . self::getTableName() . " WHERE item_id=$id";
+            $sql = "SELECT * FROM " . self::getTableName() . " WHERE $columnName=$id";
             //$sql = "SELECT * FROM " . self::getTableName() . " WHERE id=$id";
             $stmt = self::$db->prepare($sql);
             $stmt->execute([$id]);
@@ -168,6 +192,32 @@ abstract class Model
         }
     }
 
+    public function editMovie(){
+        self::connect();
+        try {
+            $sql = 'UPDATE item SET title=?, description=?, image=? WHERE item_id=?';
+            self::$db->prepare($sql)->execute([$this->title, $this->description, $this->image, $this->item_id]);
+            $sql = 'UPDATE movie SET duration=? WHERE item_id=?';
+            self::$db->prepare($sql)->execute([$this->duration, $this->item_id]);
+
+        } catch (PDOException $e) {
+            echo "Nepodarilo sa zapisat do DB:" . $e->getMessage();
+        }
+    }
+
+    public function editSeries(){
+        self::connect();
+        try {
+            $sql = 'UPDATE item SET title=?, description=?, image=? WHERE item_id=?';
+            self::$db->prepare($sql)->execute([$this->title, $this->description, $this->image, $this->item_id]);
+            $sql = 'UPDATE series SET number_of_seasons=? WHERE item_id=?';
+            self::$db->prepare($sql)->execute([$this->number_of_seasons, $this->item_id]);
+
+        } catch (PDOException $e) {
+            echo "Nepodarilo sa zapisat do DB:" . $e->getMessage();
+        }
+    }
+
     public function saveSeries(){
         self::connect();
         try {
@@ -179,7 +229,7 @@ abstract class Model
                 $idValue = $idVal['MAX(item_id)'];
             }
             $sql = 'INSERT INTO series(number_of_seasons, item_id) VALUES (?, ?)';
-            self::$db->prepare($sql)->execute([$this->numberOfSeasons, $idValue]);
+            self::$db->prepare($sql)->execute([$this->number_of_seasons, $idValue]);
 
         } catch (PDOException $e) {
             echo "Nepodarilo sa zapisat do DB:" . $e->getMessage();
@@ -203,6 +253,30 @@ abstract class Model
             if ($stmt->rowCount() == 0) {
                 throw new \Exception('Model not found!');
             }
+        } catch (PDOException $e) {
+            throw new \Exception('Query failed: ' . $e->getMessage());
+        }
+    }
+
+    static public function deleteMovie($id){
+        self::connect();
+        try {
+            $sql = "DELETE FROM " . movie . " WHERE item_id=?";
+            self::$db->prepare($sql)->execute([$id]);
+            $sql = "DELETE FROM " . item . " WHERE item_id=?";
+            self::$db->prepare($sql)->execute([$id]);
+        } catch (PDOException $e) {
+            throw new \Exception('Query failed: ' . $e->getMessage());
+        }
+    }
+
+    static public function deleteSeries($id){
+        self::connect();
+        try {
+            $sql = "DELETE FROM " . series . " WHERE item_id=?";
+            self::$db->prepare($sql)->execute([$id]);
+            $sql = "DELETE FROM " . item . " WHERE item_id=?";
+            self::$db->prepare($sql)->execute([$id]);
         } catch (PDOException $e) {
             throw new \Exception('Query failed: ' . $e->getMessage());
         }

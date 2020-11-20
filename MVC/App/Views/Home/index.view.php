@@ -9,7 +9,7 @@
     <p>Makes it easier to decide what to watch.</p>
 </div>
 
-<div class="container pt-3">
+<div class="container pt-3 pb-5">
     <h2>Recently added movies</h2>
     <div class="row bg-secondary text-light">
         <?php
@@ -54,4 +54,5 @@
 
 
 </div>
+
 

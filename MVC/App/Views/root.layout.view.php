@@ -29,10 +29,10 @@
                 <a class="nav-link text-light" href="?c=Home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" href="#">Movies</a>
+                <a class="nav-link text-light" href="?c=Movies">Movies</a>
             </li>
             <li class="nav-item">
-                <a class=" nav-link text-light" href="#">Series</a>
+                <a class=" nav-link text-light" href="?c=Series">Series</a>
             </li>
             <li class="nav-item">
                 <a class=" nav-link text-light" href="?c=Home&a=Insert">Insert item</a>
@@ -65,6 +65,7 @@
 <div class="web-content pt-5">
     <?= $contentHTML ?>
 </div>
+
 
 </body>
 </html>

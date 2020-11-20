@@ -32,10 +32,17 @@
             ?>
 
         </div>
+
         <div class="col-md-2 border pt-3 text-center pb-3">
             <h3>Rating</h3>
             <h2 style="color: orangered">86%</h2>
             <button type="button" class="btn btn-success ">Add to my list</button>
+            <?php
+            $typ = $_GET['type'];
+            $id = $_GET['id'];
+            ?>
+            <button type="button" class="btn btn-warning mt-3" onclick="location.href='?c=detail&a=delete&type=<?= $typ ?>&id=<?= $id ?>'">Delete from database</button>
+            <button type="button" class="btn btn-info mt-3" onclick="location.href='?c=detail&a=edit&type=<?= $typ ?>&id=<?= $id ?>'">Edit item</button>
         </div>
     </div>
 </div>
