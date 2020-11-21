@@ -5,12 +5,12 @@
 
 <div class="jumbotron text-center shadow">
     <h2>What to watch</h2>
-    <p>Welcome to the app for creating lists of your favorite movies and series.</p>
-    <p>Makes it easier to decide what to watch.</p>
+    <p>Vitajte na stránke kde si môžete vytvárať zoznamy svojich obľúbených filmov a seriálov.</p>
+    <p>Na zákalde týchto zoznamov sa môžte jednoducho rozhodovať čo si pozriete.</p>
 </div>
 
 <div class="container pt-3 pb-5">
-    <h2>Recently added movies</h2>
+    <h2>Naposledy pridané filmy</h2>
     <div class="row bg-secondary text-light">
         <?php
         /** @var \App\MovieInfo $data */
@@ -31,7 +31,7 @@
         ?>
     </div>
 
-    <h2 class="pt-3">Recently added series</h2>
+    <h2 class="pt-3">Naposledy pridané seriály</h2>
     <div class="row bg-secondary text-light">
         <?php
         /** @var \App\SeriesInfo $data */

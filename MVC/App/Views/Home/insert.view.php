@@ -1,15 +1,126 @@
-<form method="post" enctype="multipart/form-data">
-    <br/>
-    <input required type="text" name="title" placeholder="Vloz nadpis">
-    <input required type="text" name="description" placeholder="Vloz text">
-    <input type="text" name="duration" placeholder="Vloz dlzku trvania">
-    <input type="text" name="numbOfSe" placeholder="Vloz pocet serii">
-    <input type="radio" name="type" value="m" checked>Movie
-    <input type="radio" name="type" value="s">Series
+<link rel="stylesheet" href="http://localhost/VAII_SEM/MVC/public/css/insert_item_style.css">
 
-    <input required type="file" name="image"/>
 
-    <br/><br/>
-    <input type="submit" name="submit" value="Upload"/>
-</form>
+<div id="insertItemContainer" class="container shadow-lg">
+    <h2 class="text-center">Item insert</h2>
+    <form class="form-group" method="post" enctype="multipart/form-data">
+        <br/>
+        <?php
+        /** @var Array[] $data */
+        if ($data == null) {
+            ?>
+            <div id="titlesOfForm">
+                Názov
+            </div>
+            <input required type="text" class="form-control mb-2" name="title" placeholder="Vlož názov">
+            <div id="titlesOfForm">
+                Popis
+            </div>
+            <input required type="text" class="form-control mb-2" name="description" placeholder="Vlož popis">
+            <div id="titlesOfForm">
+                Dĺžka trvania
+            </div id="titlesOfForm">
+            <input type="text" name="duration" class="form-control mb-2" placeholder="Vlož dĺžku trvania (film)">
+            <div id="titlesOfForm">
+                Počet sérií
+            </div>
+            <input type="text" name="numbOfSe" class="form-control mb-2" placeholder="Vlož počet sérií (seriál)">
+
+            <input type="radio" name="type" value="m" checked>Film
+            <input type="radio" name="type" value="s">Seriál
+            <div id="titlesOfForm">
+                Obrázok
+            </div>
+            <input required type="file" name="image"/>
+
+            <br/>
+            <input type="submit" class="btn btn-primary mt-2" name="submit" value="Nahrať"/>
+
+            <?php
+        } else {
+            ?>
+            <div id="titlesOfForm">
+                Názov
+            </div>
+            <input required type="text" class="form-control mb-2" name="title" placeholder="Vlož názov"
+                   value='<?= $data[0][0] ?>'>
+            <?php if (isset($data[1][0])) {
+                foreach ($data[1][0] as $error) {
+                    ?>
+                    <div class="text-danger">
+                        <?= $error ?>
+                    </div>
+                <?php }
+            } ?>
+            <div id="titlesOfForm">
+                Popis
+            </div>
+            <input required type="text" name="description" class="form-control mb-2" placeholder="Vlož popis"
+                   value='<?= $data[0][1] ?>'>
+            <?php if (isset($data[1][1])) {
+                foreach ($data[1][1] as $error) {
+                    ?>
+                    <div class="text-danger">
+                        <?= $error ?>
+                    </div>
+                <?php }
+            } ?>
+            <div id="titlesOfForm">
+                Dĺžka trvania
+            </div>
+            <input type="text" name="duration" class="form-control mb-2" placeholder="Vlož dĺžku trvania (film)"
+                   value='<?php
+                   if ($data[0][2] == "m") {
+                       echo $data[0][3];
+                   }
+                   ?>'>
+            <?php if (isset($data[1][2])) {
+                foreach ($data[1][2] as $error) {
+                    ?>
+                    <div class="text-danger">
+                        <?= $error ?>
+                    </div>
+
+                <?php }
+            } ?>
+            <div id="titlesOfForm">
+                Počet sérií
+            </div>
+            <input type="text" name="numbOfSe" class="form-control mb-2" placeholder="Vlož počet sérií (seriál)"
+                   value='<?php
+                   if ($data[0][2] == "s") {
+                       echo $data[0][3];
+                   }
+                   ?>'>
+            <?php if (isset($data[1][3])) {
+                foreach ($data[1][3] as $error) {
+                    ?>
+                    <div class="text-danger">
+                        <?= $error ?>
+                    </div>
+
+                <?php }
+            } ?>
+            <input type="radio" name="type" value="m" <?php
+            if ($data[0][2] == "m") {
+                echo 'checked';
+            }
+            ?>>Film
+            <input type="radio" name="type" value="s" <?php
+            if ($data[0][2] == "s") {
+                echo 'checked';
+            }
+            ?>>Seriál
+            <div id="titlesOfForm">
+                Obrázok
+            </div>
+            <input required type="file" name="image"/>
+
+            <br/>
+            <input type="submit" name="submit" class="btn btn-primary mt-2" value="Nahrať"/>
+            <?php
+        }
+        ?>
+    </form>
+</div>
 

@@ -108,7 +108,7 @@ class DetailController extends AControllerBase
         }
     }
 
-    public function validation($title, $description, $numberOfSeasons, $duration)
+    static public function validation($title, $description, $numberOfSeasons, $duration)
     {
         //title validation
         $titleErrors = [];
@@ -149,7 +149,15 @@ class DetailController extends AControllerBase
                 $nosErrors[] = "Pocet serii musi byt pre serial vyplneny";
             }
 
-            if (!is_numeric($numberOfSeasons) && !is_integer($numberOfSeasons)){
+            /*if (!is_numeric($numberOfSeasons) || !is_integer($numberOfSeasons)){
+                $nosErrors[] = "Pocet serii musi byt reprezentovany celym cislom";
+            }*/
+            if (!is_numeric($numberOfSeasons)){
+                $nosErrors[] = "Pocet serii musi byt reprezentovany cislom";
+            }
+            $dot = strpos($numberOfSeasons, ",");
+            $comma = strpos($numberOfSeasons, ".");
+            if (($comma != false) || ($dot != false)){
                 $nosErrors[] = "Pocet serii musi byt reprezentovany celym cislom";
             }
         }

@@ -26,31 +26,31 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-light" href="?c=Home">Home</a>
+                <a class="nav-link text-light" href="?c=Home">Domov</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" href="?c=Movies">Movies</a>
+                <a class="nav-link text-light" href="?c=Movies">Filmy</a>
             </li>
             <li class="nav-item">
-                <a class=" nav-link text-light" href="?c=Series">Series</a>
+                <a class=" nav-link text-light" href="?c=Series">Seriály</a>
             </li>
             <li class="nav-item">
-                <a class=" nav-link text-light" href="?c=Home&a=Insert">Insert item</a>
+                <a class=" nav-link text-light" href="?c=Home&a=Insert">Vložiť prvok</a>
             </li>
         </ul>
     </div>
 
     <div class="collapse navbar-collapse" id="rightSideBar">
         <form id="searchBar" class="form-inline" action="#">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-info" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="text" placeholder="Hľadať">
+            <button class="btn btn-info" type="submit">Vyhľadať</button>
         </form>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link text-light" href="#">Sign up</a>
+                <a class="nav-link text-light" href="#">Registrácia</a>
             </li>
             <li class="nav-item">
-                <a class=" nav-link text-light" href="#">Login</a>
+                <a class=" nav-link text-light" href="#">Prihlásenie</a>
             </li>
             <li class="nav-item">
                 <a class=" nav-link text-light" href="#">FAQ</a>

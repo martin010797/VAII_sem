@@ -1,0 +1,27 @@
+body{
+    background-color: lightgrey;
+}
+.form-inline .btn{
+    background-color: dodgerblue;
+}
+#titlesOfForm{
+    font-weight: bold;
+}
+#insertItemContainer{
+    background-color: skyblue;
+    width: 600px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+    #insertItemContainer{
+        width: 350px;
+    }
+}
+.navbar .navbar-brand{
+    color: dodgerblue;
+}
