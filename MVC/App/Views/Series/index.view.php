@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="http://localhost/VAII_SEM/MVC/public/css/main_page_style.css">
 
 <div class="container-fluid pt-3 pb-5">
-    <h2>Series</h2>
+    <h2>Seriály</h2>
     <?php
     /** @var \App\SeriesInfo $data */
     $rw = 0;

@@ -6,13 +6,13 @@ use App\Core\AControllerBase;
 use App\Core\Model;
 use App\MovieInfo;
 use App\SeriesInfo;
+use App\App;
 
 class HomeController extends AControllerBase
 {
 
     public function index()
     {
-
         $allItems = [];
         $allItems['movie'] = MovieInfo::getRecentlyAddedItems();
         $allItems['series'] = SeriesInfo::getRecentlyAddedItems();
@@ -50,8 +50,8 @@ class HomeController extends AControllerBase
                 if ($itemValidation == null){
                     $movie = new MovieInfo($title, $description, $image, $duration);
                     $movie->saveMovie();
-                    //header("Location: http://localhost/VAII_sem/MVC?c=Home");
-                    header("Location: http://localhost/VAII_sem/MVC?c=Home&a=alert");
+                    header("Location: http://localhost/VAII_sem/MVC?c=Home");
+                    //header("Location: http://localhost/VAII_sem/MVC?c=Home&a=alert");
                     die();
                 }else{
                     $item = [];

@@ -47,10 +47,16 @@
         </form>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+                <a class="nav-link text-light" href="#">Moje filmy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">Moje seriály</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-light" href="#">Registrácia</a>
             </li>
             <li class="nav-item">
-                <a class=" nav-link text-light" href="#">Prihlásenie</a>
+                <a class=" nav-link text-light" href="?c=auth&a=login">Prihlásenie</a>
             </li>
             <li class="nav-item">
                 <a class=" nav-link text-light" href="#">FAQ</a>

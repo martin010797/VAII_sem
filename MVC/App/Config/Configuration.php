@@ -16,6 +16,10 @@ class Configuration
 
     public const LOGIN_URL = '/';
 
+    public const ROOT_LAYOUT = 'root.layout.view.php';
+
+    public const DEBUG_QUERY = false;
+
     private static $instance = NULL;
 
     /**
