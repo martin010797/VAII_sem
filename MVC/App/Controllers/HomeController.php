@@ -14,12 +14,19 @@ class HomeController extends AControllerBase
     {
 
         $allItems = [];
-        //$allItems['movie'] = MovieInfo::getAll();
         $allItems['movie'] = MovieInfo::getRecentlyAddedItems();
-        //$allItems['series'] = SeriesInfo::getAll();
         $allItems['series'] = SeriesInfo::getRecentlyAddedItems();
+        //$allItems['alert'] = null;
         return $allItems;
     }
+
+    /*public function alert(){
+        $allItems = [];
+        $allItems['movie'] = MovieInfo::getRecentlyAddedItems();
+        $allItems['series'] = SeriesInfo::getRecentlyAddedItems();
+        $allItems['alert'] = "nejaky alert";
+        return $allItems;
+    }*/
 
     public function insert()
     {
@@ -32,7 +39,7 @@ class HomeController extends AControllerBase
             $image = base64_encode($image);
 
             $title = $_POST["title"];
-            $description = $_POST["description"];
+            $description = $_POST["popis_prvku"];
 
 
             if ($_POST['type'] == 'm'){
@@ -43,7 +50,8 @@ class HomeController extends AControllerBase
                 if ($itemValidation == null){
                     $movie = new MovieInfo($title, $description, $image, $duration);
                     $movie->saveMovie();
-                    header("Location: http://localhost/VAII_sem/MVC?c=Home");
+                    //header("Location: http://localhost/VAII_sem/MVC?c=Home");
+                    header("Location: http://localhost/VAII_sem/MVC?c=Home&a=alert");
                     die();
                 }else{
                     $item = [];

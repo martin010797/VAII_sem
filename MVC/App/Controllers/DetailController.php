@@ -27,7 +27,6 @@ class DetailController extends AControllerBase
     public function delete()
     {
         if ($_GET['type'] == 'm') {
-            //$_GET['id']
             Model::deleteMovie($_GET['id']);
             header("Location: http://localhost/VAII_sem/MVC?c=Movies");
             die();
@@ -50,7 +49,7 @@ class DetailController extends AControllerBase
             $image = base64_encode($image);
 
             $title = $_POST["title"];
-            $description = $_POST["description"];
+            $description = $_POST["popis_prvku"];
 
 
             if ($_POST['type'] == 'm') {
@@ -148,10 +147,6 @@ class DetailController extends AControllerBase
             if (strlen($numberOfSeasons) == 0){
                 $nosErrors[] = "Pocet serii musi byt pre serial vyplneny";
             }
-
-            /*if (!is_numeric($numberOfSeasons) || !is_integer($numberOfSeasons)){
-                $nosErrors[] = "Pocet serii musi byt reprezentovany celym cislom";
-            }*/
             if (!is_numeric($numberOfSeasons)){
                 $nosErrors[] = "Pocet serii musi byt reprezentovany cislom";
             }

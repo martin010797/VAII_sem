@@ -25,18 +25,17 @@
 
             <?php }
         } ?>
+
         <div id="titlesOfForm">
             Popis
         </div>
-        <input required type="text" class="form-control mb-2" name="description" placeholder="Vlož popis"
-               value='<?= $data[0]->getDescription() ?>'>
+        <textarea class="form-control" id="popis_prvku" name="popis_prvku" rows="3"><?= $data[0]->getDescription() ?></textarea>
         <?php if (isset($data[1][1])) {
             foreach ($data[1][1] as $error) {
                 ?>
                 <div class="text-danger">
                     <?= $error ?>
                 </div>
-
             <?php }
         } ?>
         <div id="titlesOfForm">

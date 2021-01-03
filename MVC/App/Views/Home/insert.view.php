@@ -1,8 +1,7 @@
 <link rel="stylesheet" href="http://localhost/VAII_SEM/MVC/public/css/insert_item_style.css">
 
-
 <div id="insertItemContainer" class="container shadow-lg">
-    <h2 class="text-center">Item insert</h2>
+    <h2 class="text-center">Vloženie prvku</h2>
     <form class="form-group" method="post" enctype="multipart/form-data">
         <br/>
         <?php
@@ -13,10 +12,12 @@
                 Názov
             </div>
             <input required type="text" class="form-control mb-2" name="title" placeholder="Vlož názov">
+
             <div id="titlesOfForm">
                 Popis
             </div>
-            <input required type="text" class="form-control mb-2" name="description" placeholder="Vlož popis">
+            <textarea class="form-control" id="popis_prvku" name="popis_prvku" rows="3" placeholder="Vlož popis"></textarea>
+
             <div id="titlesOfForm">
                 Dĺžka trvania
             </div id="titlesOfForm">
@@ -52,11 +53,11 @@
                     </div>
                 <?php }
             } ?>
+
             <div id="titlesOfForm">
                 Popis
             </div>
-            <input required type="text" name="description" class="form-control mb-2" placeholder="Vlož popis"
-                   value='<?= $data[0][1] ?>'>
+            <textarea class="form-control" id="popis_prvku" name="popis_prvku" rows="3"><?= $data[0][1] ?></textarea>
             <?php if (isset($data[1][1])) {
                 foreach ($data[1][1] as $error) {
                     ?>
@@ -65,6 +66,7 @@
                     </div>
                 <?php }
             } ?>
+
             <div id="titlesOfForm">
                 Dĺžka trvania
             </div>

@@ -2,7 +2,6 @@
 
 <link rel="stylesheet" href="http://localhost/VAII_SEM/MVC/public/css/main_page_style.css">
 
-
 <div class="jumbotron text-center shadow">
     <h2>What to watch</h2>
     <p>Vitajte na stránke kde si môžete vytvárať zoznamy svojich obľúbených filmov a seriálov.</p>
