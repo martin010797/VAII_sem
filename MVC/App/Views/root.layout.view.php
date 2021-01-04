@@ -63,7 +63,7 @@
             <?php
             if (!$auth->isLogged()) { ?>
             <li class="nav-item">
-                <a class="nav-link text-light" href="#">Registrácia</a>
+                <a class="nav-link text-light" href="?c=auth&a=signup">Registrácia</a>
             </li>
             <li class="nav-item">
                 <a class=" nav-link text-light" href="?c=auth&a=login">Prihlásenie</a>

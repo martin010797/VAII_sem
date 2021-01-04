@@ -12,6 +12,6 @@
         <input type="text" class="form-control mb-2" name="email" placeholder="Email">
         <input type="password" class="form-control mb-3" name="password" placeholder="Heslo">
         <button type="submit" class="btn btn-primary mb-1 shadow" name="login">Login</button>
-        <button type="button" class="btn btn-link btn-block p-0 m-0 text-right" style="color: black">Nemáš konto?</button>
+        <button type="submit" class="btn btn-link btn-block p-0 m-0 text-right" name="signup" style="color: black">Nemáš konto?</button>
     </form>
 </div>
