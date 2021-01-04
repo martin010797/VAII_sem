@@ -12,6 +12,7 @@ class SeriesController extends AControllerBase
 
     public function index()
     {
-        return SeriesInfo::getAll();
+        //return SeriesInfo::getAll();
+        return $this->html(SeriesInfo::getAll());
     }
 }

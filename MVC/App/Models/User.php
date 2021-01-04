@@ -10,7 +10,7 @@ class User extends \App\Core\Model
     protected $email;
     protected $password;
 
-    public function __construct($id, $email, $password)
+    public function __construct($id = "", $email = "", $password = "")
     {
         $this->id = $id;
         //$this->username = $username;

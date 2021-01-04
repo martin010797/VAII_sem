@@ -1,5 +1,7 @@
-
 <!DOCTYPE html>
+<?php
+/** @var \App\Core\AAuthenticator $auth */
+?>
 <html lang="en">
 <head>
 
@@ -34,9 +36,12 @@
             <li class="nav-item">
                 <a class=" nav-link text-light" href="?c=Series">Seriály</a>
             </li>
-            <li class="nav-item">
-                <a class=" nav-link text-light" href="?c=Home&a=Insert">Vložiť prvok</a>
-            </li>
+            <?php
+            if ($auth->isLogged()) { ?>
+                <li class="nav-item">
+                    <a class=" nav-link text-light" href="?c=Home&a=Insert">Vložiť prvok</a>
+                </li>
+            <?php } ?>
         </ul>
     </div>
 
@@ -46,26 +51,34 @@
             <button class="btn btn-info" type="submit">Vyhľadať</button>
         </form>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#">Moje filmy</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#">Moje seriály</a>
-            </li>
+            <?php
+            if ($auth->isLogged()) { ?>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Moje filmy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Moje seriály</a>
+                </li>
+            <?php } ?>
+            <?php
+            if (!$auth->isLogged()) { ?>
             <li class="nav-item">
                 <a class="nav-link text-light" href="#">Registrácia</a>
             </li>
             <li class="nav-item">
                 <a class=" nav-link text-light" href="?c=auth&a=login">Prihlásenie</a>
             </li>
+            <?php } ?>
+            <?php
+            if ($auth->isLogged()) { ?>
             <li class="nav-item">
-                <a class=" nav-link text-light" href="#">FAQ</a>
+                <a class=" nav-link text-light" href="?c=auth&a=logout">Odhlásenie</a>
             </li>
+            <?php } ?>
         </ul>
     </div>
 
 </nav>
-
 
 
 <div class="web-content pt-5">

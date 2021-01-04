@@ -2,6 +2,10 @@
 
 namespace App;
 
+use App\Config\Configuration;
+use App\Core\AAuthenticator;
+use App\Core\DB\Connection;
+use App\Core\Request;
 use App\Core\Router;
 
 /**
@@ -11,24 +15,33 @@ use App\Core\Router;
  */
 class App
 {
-
     /**
      * @var Router
      */
     private $router;
 
     /**
-     * @var Config\Configuration|null
+     * @var Request
      */
-    private static $config;
+    private Request $request;
+
+    private ?AAuthenticator $auth;
 
     /**
      * App constructor
      */
     public function __construct()
     {
-        self::$config = Config\Configuration::getInstance();
         $this->router = new Router();
+        $this->request = new Request();
+
+        // Check if there is an authenticator
+        if (defined('\\App\\Config\\Configuration::AUTH_CLASS')) {
+            $authClass = Configuration::AUTH_CLASS;
+            $this->auth = $authClass::getInstance();
+        } else {
+            $this->auth = null;
+        }
     }
 
     /**
@@ -39,23 +52,52 @@ class App
     {
         ob_start();
 
-        $route = $this->router->processURL();
+        // get a controller and action from URL
+        $this->router->processURL();
 
-        $data = call_user_func([$route['controller'], $route['action']]);
+        //create a Controller and inject App into it
+        $controllerName = $this->router->getFullControllerName();
+        $controller = new $controllerName($this);
 
-        require "App" . DIRECTORY_SEPARATOR . "Views" . DIRECTORY_SEPARATOR . $route['controller']->getName() . DIRECTORY_SEPARATOR . $route['action'] . ".view.php";
+        // call appropriate method of the controller class
+        $response = call_user_func([$controller, $this->router->getAction()]);
 
-        $contentHTML = ob_get_clean();
+        // return view to user
+        $response->generate();
 
-        require "App" . DIRECTORY_SEPARATOR . "Views" . DIRECTORY_SEPARATOR . "root.layout.view.php";
+        // if DEBUG for SQL is set, show SQL queries to DB
+        if (Configuration::DEBUG_QUERY) {
+            header_remove('Location');
+            $queries = array_map(function ($q) {
+                $lines = explode("\n", $q);
+                return '<pre>' . (substr($lines[1], 0, 7) == 'Params:' ? 'Sent ' . $lines[0] : $lines[1]) . '</pre>';
+            }, Connection::getQueryLog());
+            echo PHP_EOL . PHP_EOL . implode(PHP_EOL . PHP_EOL, $queries) . "\n\nTotal queries: " . count($queries);
+        }
     }
 
     /**
-     * @return Config\Configuration|null
+     * @return Router
      */
-    public static function getConfig(): ?Config\Configuration
+    public function getRouter(): Router
     {
-        return self::$config;
+        return $this->router;
+    }
+
+    /**
+     * @return Request
+     */
+    public function getRequest(): Request
+    {
+        return $this->request;
+    }
+
+    /**
+     * @return AAuthenticator|null
+     */
+    public function getAuth(): ?AAuthenticator
+    {
+        return $this->auth;
     }
 
 }

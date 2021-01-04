@@ -12,6 +12,7 @@ class MoviesController extends AControllerBase
 
     public function index()
     {
-        return MovieInfo::getAll();
+        //return MovieInfo::getAll();
+        return $this->html(MovieInfo::getAll());
     }
 }

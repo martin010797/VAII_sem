@@ -9,7 +9,7 @@ abstract class AAuthenticator
 {
     protected static $instance;
 
-    static public function getInstatnce(): AAuthenticator
+    static public function getInstance(): AAuthenticator
     {
         if (AAuthenticator::$instance == null){
             AAuthenticator::$instance = new static();

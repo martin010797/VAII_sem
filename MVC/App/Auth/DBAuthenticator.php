@@ -21,7 +21,8 @@ class DBAuthenticator extends AAuthenticator
         if (count($foundUser) == 1){
             $foundUser = $foundUser[0];
             //TODO zmenit neskor overovanie hesla ked bude uz zahashovane
-            if ($pass == $foundUser->getPassword()){
+            //if ($pass == $foundUser->getPassword()){
+            if (password_verify($pass, $foundUser->getPassword())){
                 $_SESSION['user'] = $foundUser;
                 return true;
             }else{

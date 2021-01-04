@@ -16,17 +16,9 @@ class HomeController extends AControllerBase
         $allItems = [];
         $allItems['movie'] = MovieInfo::getRecentlyAddedItems();
         $allItems['series'] = SeriesInfo::getRecentlyAddedItems();
-        //$allItems['alert'] = null;
-        return $allItems;
+        return $this->html($allItems);
+        //return $allItems;
     }
-
-    /*public function alert(){
-        $allItems = [];
-        $allItems['movie'] = MovieInfo::getRecentlyAddedItems();
-        $allItems['series'] = SeriesInfo::getRecentlyAddedItems();
-        $allItems['alert'] = "nejaky alert";
-        return $allItems;
-    }*/
 
     public function insert()
     {
@@ -59,7 +51,8 @@ class HomeController extends AControllerBase
                     $item[] = $description;
                     $item[] = "m";
                     $item[] = $duration;
-                    return [$item, $itemValidation];
+                    //return [$item, $itemValidation];
+                    return $this->html([$item, $itemValidation]);
                 }
             }
             if ($_POST['type'] == 's'){
@@ -78,11 +71,12 @@ class HomeController extends AControllerBase
                     $item[] = $description;
                     $item[] = "s";
                     $item[] = $numberOfSeasons;
-                    return [$item, $itemValidation];
+                    //return [$item, $itemValidation];
+                    return $this->html([$item, $itemValidation]);
                 }
             }
         }
-        return null;
+        return $this->html();
     }
 
 
