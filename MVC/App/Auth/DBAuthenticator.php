@@ -36,7 +36,7 @@ class DBAuthenticator extends AAuthenticator
         $foundUser = User::getAllWhere("email = ?",[$email]);
         if (count($foundUser) == 0) {
             //ak este takz nikto zaregistrovany nie je
-            $user = new User("",$email, $password);
+            $user = new User("",$email, $password, 0);
             $user->signupUser();
             return true;
         }else{
@@ -61,5 +61,19 @@ class DBAuthenticator extends AAuthenticator
     function isLogged()
     {
         return isset($_SESSION['user']) && $_SESSION['user'] != null;
+    }
+
+    function isMaintainer()
+    {
+        if (isset($_SESSION['user']) && $_SESSION['user'] != null){
+            $user = $_SESSION['user'];
+            if ($_SESSION['user']->getMaintainer() == 1){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 }

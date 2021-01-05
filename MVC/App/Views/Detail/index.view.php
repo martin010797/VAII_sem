@@ -40,6 +40,8 @@
             $id = $_GET['id'];
             if ($auth->isLogged()) { ?>
             <button type="button" class="btn btn-info mb-3" onclick="location.href='?c=detail&a=edit&type=<?= $typ ?>&id=<?= $id ?>'">Upraviť</button>
+            <?php } ?>
+            <?php if ($auth->isMaintainer()) { ?>
             <button type="button" class="btn btn-warning mb-3 " onclick="location.href='?c=detail&a=delete&type=<?= $typ ?>&id=<?= $id ?>'">Vymazať z databázy</button>
             <?php } ?>
         </div>

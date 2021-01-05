@@ -6,21 +6,23 @@ namespace App\Models;
 
 class User extends \App\Core\Model
 {
-    protected $id;
+    protected $user_id;
     protected $email;
     protected $password;
+    protected $maintainer;
 
-    public function __construct($id = "", $email = "", $password = "")
+    public function __construct($user_id = "", $email = "", $password = "", $maintainer = "")
     {
-        $this->id = $id;
+        $this->user_id = $user_id;
         //$this->username = $username;
         $this->email = $email;
         $this->password = $password;
+        $this->maintainer = $maintainer;
     }
 
     static public function setDbColumns()
     {
-        return ['user_id', 'email', 'password'];
+        return ['user_id', 'email', 'password', 'maintainer'];
     }
 
     static public function setTableName()
@@ -31,17 +33,17 @@ class User extends \App\Core\Model
     /**
      * @return mixed
      */
-    public function getId()
+    public function getMaintainer()
     {
-        return $this->id;
+        return $this->maintainer;
     }
 
     /**
-     * @param mixed $id
+     * @param mixed $maintainer
      */
-    public function setId($id): void
+    public function setMaintainer($maintainer): void
     {
-        $this->id = $id;
+        $this->maintainer = $maintainer;
     }
 
     /**
@@ -74,5 +76,21 @@ class User extends \App\Core\Model
     public function setPassword($password): void
     {
         $this->password = $password;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
+    }
+
+    /**
+     * @param mixed|string $user_id
+     */
+    public function setUserId($user_id): void
+    {
+        $this->user_id = $user_id;
     }
 }

@@ -71,8 +71,6 @@ class AuthController extends \App\Core\AControllerBase
             } else {
                 return $this->html(['']);
             }
-
-
         }
     }
 

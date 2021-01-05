@@ -233,8 +233,8 @@ ORDER BY item_id DESC");
     public function signupUser(){
         self::connect();
         try {
-            $sql = 'INSERT INTO user(email, password) VALUES (?, ?)';
-            self::$connection->prepare($sql)->execute([$this->email, $this->password]);
+            $sql = 'INSERT INTO user(email, password, maintainer) VALUES (?, ?, ?)';
+            self::$connection->prepare($sql)->execute([$this->email, $this->password, $this->maintainer]);
         } catch (PDOException $e) {
             echo "Nepodarilo sa zapisat do DB:" . $e->getMessage();
         }
