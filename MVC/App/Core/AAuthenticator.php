@@ -17,6 +17,8 @@ abstract class AAuthenticator
         return AAuthenticator::$instance;
     }
 
+    abstract function signup($email, $password);
+
     abstract function login($userLogin, $pass);
 
     abstract function logout();

@@ -44,20 +44,26 @@ class AuthController extends \App\Core\AControllerBase
             return $this->redirect('?c=home');
         } else {
             $formData = $this->app->getRequest()->getPost();
-            //TODO implementovat registraciu
             //return $this->html();
             if (isset($formData['signup'])) {
-                //validacia ci je heslo rovnake pri opakovani
                 $userValidation = null;
                 $userValidation = $this->signupValidation($formData['email'], $formData['password'], $formData['repeatPassword']);
                 if ($userValidation == null) {
-                    //bez chyb
                     //temp
-                    return $this->redirect('?c=home');
+                    //return $this->redirect('?c=home');
                     //zavola sa funkcia v autentifikatore ktora overi ci nema nikto rovnaky mail
-                    //pokial ma tak vypise chybu
-
+                    $signedUp = $this->app->getAuth()->signup($formData['email'], password_hash($formData['password'], PASSWORD_DEFAULT));
                     //pokial nie tak ho prida do databazy, prihlasi a redirectne na home
+                    if ($signedUp){
+                        $logged = $this->app->getAuth()->login($formData['email'], $formData['password']);
+                        return $this->redirect('?c=home');
+                    }else{
+                        $mail = $formData['email'];
+                        $emailErrors = [];
+                        $passwordErrors = [];
+                        $emailErrors[] = "Taký email sa už používa";
+                        return $this->html([$mail, [$emailErrors, $passwordErrors]], 'signup');
+                    }
                 } else {
                     $mail = $formData['email'];
                     return $this->html([$mail, $userValidation], 'signup');

@@ -32,6 +32,19 @@ class DBAuthenticator extends AAuthenticator
         }
     }
 
+    public function signup($email, $password){
+        $foundUser = User::getAllWhere("email = ?",[$email]);
+        if (count($foundUser) == 0) {
+            //ak este takz nikto zaregistrovany nie je
+            $user = new User("",$email, $password);
+            $user->signupUser();
+            return true;
+        }else{
+            //niekto uz taky email pouziva
+            return false;
+        }
+    }
+
     function logout()
     {
         if (isset($_SESSION["user"])){
