@@ -52,7 +52,7 @@
         </form>
         <ul class="navbar-nav ml-auto">
             <?php
-            if ($auth->isLogged()) { ?>
+            if ($auth->isLogged() && !$auth->isMaintainer()) { ?>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Moje filmy</a>
                 </li>

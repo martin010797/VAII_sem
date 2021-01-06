@@ -38,11 +38,13 @@
             <?php
             $typ = $_GET['type'];
             $id = $_GET['id'];
-            if ($auth->isLogged()) { ?>
-            <button type="button" class="btn btn-info mb-3" onclick="location.href='?c=detail&a=edit&type=<?= $typ ?>&id=<?= $id ?>'">Upraviť</button>
+            if ($auth->isLogged() && !$auth->isMaintainer()) { ?>
+            <button type="button" class="btn btn-success mb-3" onclick="location.href='#'">Pridať do zoznamu</button>
             <?php } ?>
+
             <?php if ($auth->isMaintainer()) { ?>
-            <button type="button" class="btn btn-warning mb-3 " onclick="location.href='?c=detail&a=delete&type=<?= $typ ?>&id=<?= $id ?>'">Vymazať z databázy</button>
+                <button type="button" class="btn btn-info mb-3" onclick="location.href='?c=detail&a=edit&type=<?= $typ ?>&id=<?= $id ?>'">Upraviť</button>
+                <button type="button" class="btn btn-danger mb-3 " onclick="location.href='?c=detail&a=delete&type=<?= $typ ?>&id=<?= $id ?>'">Vymazať z databázy</button>
             <?php } ?>
         </div>
     </div>

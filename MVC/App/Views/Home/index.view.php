@@ -5,7 +5,7 @@
 <div class="jumbotron text-center shadow">
     <h2>What to watch</h2>
     <p>Vitajte na stránke kde si môžete vytvárať zoznamy svojich obľúbených filmov a seriálov.</p>
-    <p>Na zákalde týchto zoznamov sa môžte jednoducho rozhodovať čo si pozriete.</p>
+    <p>Na základe týchto zoznamov sa môžte jednoducho rozhodovať čo si pozriete.</p>
 </div>
 
 <div class="container pt-3 pb-5">
