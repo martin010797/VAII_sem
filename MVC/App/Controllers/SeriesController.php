@@ -15,4 +15,8 @@ class SeriesController extends AControllerBase
         //return SeriesInfo::getAll();
         return $this->html(SeriesInfo::getAll());
     }
+
+    public function myseries(){
+        return $this->html();
+    }
 }

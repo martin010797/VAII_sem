@@ -37,7 +37,7 @@
                 <a class=" nav-link text-light" href="?c=Series">Seriály</a>
             </li>
             <?php
-            if ($auth->isLogged()) { ?>
+            if ($auth->isLogged() && $auth->isMaintainer()) { ?>
                 <li class="nav-item">
                     <a class=" nav-link text-light" href="?c=Home&a=Insert">Vložiť prvok</a>
                 </li>
@@ -54,7 +54,7 @@
             <?php
             if ($auth->isLogged() && !$auth->isMaintainer()) { ?>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Moje filmy</a>
+                    <a class="nav-link text-light" href="?c=Movies&a=mymovies">Moje filmy</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Moje seriály</a>

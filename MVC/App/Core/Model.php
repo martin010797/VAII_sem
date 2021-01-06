@@ -13,7 +13,7 @@ use PDOException;
  * Allows basic CRUD operations
  * @package App\Core\Storage
  */
-abstract class Model
+abstract class Model implements \JsonSerializable
 {
     private static $connection = null;
     //private static $db = null;
@@ -346,5 +346,23 @@ ORDER BY item_id DESC");
         } catch (PDOException $e) {
             throw new \Exception('Query failed: ' . $e->getMessage());
         }
+    }
+
+    /**
+     * @return null
+     */
+    public static function getConnection()
+    {
+        return self::$connection;
+    }
+
+    /**
+     * Default implementation of JSON serialize method
+     * @return array|mixed
+     */
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
     }
 }
