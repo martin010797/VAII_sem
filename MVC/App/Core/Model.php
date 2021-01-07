@@ -327,6 +327,8 @@ ORDER BY item_id DESC");
     static public function deleteMovie($id){
         self::connect();
         try {
+            $sql = "DELETE FROM " . user_items . " WHERE item_id=?";
+            self::$connection->prepare($sql)->execute([$id]);
             $sql = "DELETE FROM " . movie . " WHERE item_id=?";
             self::$connection->prepare($sql)->execute([$id]);
             $sql = "DELETE FROM " . item . " WHERE item_id=?";
@@ -339,6 +341,8 @@ ORDER BY item_id DESC");
     static public function deleteSeries($id){
         self::connect();
         try {
+            $sql = "DELETE FROM " . user_items . " WHERE item_id=?";
+            self::$connection->prepare($sql)->execute([$id]);
             $sql = "DELETE FROM " . series . " WHERE item_id=?";
             self::$connection->prepare($sql)->execute([$id]);
             $sql = "DELETE FROM " . item . " WHERE item_id=?";

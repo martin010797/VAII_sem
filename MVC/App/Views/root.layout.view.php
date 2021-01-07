@@ -57,7 +57,7 @@
                     <a class="nav-link text-light" href="?c=Movies&a=mymovies">Moje filmy</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Moje seriály</a>
+                    <a class="nav-link text-light" href="?c=Series&a=myseries">Moje seriály</a>
                 </li>
             <?php } ?>
             <?php
