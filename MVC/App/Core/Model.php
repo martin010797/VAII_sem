@@ -352,6 +352,24 @@ ORDER BY item_id DESC");
         }
     }
 
+    static public function isInList($userId, $itemId){
+        self::connect();
+        try {
+            $stmt = self::$connection->query("SELECT * FROM user_items WHERE user_id=$userId AND item_id=$itemId");
+            $dbModels = $stmt->fetchAll();
+            if (count($dbModels) == 0){
+                return false;
+            }else{
+                return true;
+            }
+            /*foreach ($dbModels as $model) {
+
+            }*/
+        }catch (PDOException $e){
+            throw new \Exception('Query failed: ' . $e->getMessage());
+        }
+    }
+
     /**
      * @return null
      */

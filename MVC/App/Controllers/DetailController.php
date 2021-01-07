@@ -16,12 +16,26 @@ class DetailController extends AControllerBase
     {
         if (isset($_GET['id']) && isset($_GET['type'])) {
             if ($_GET['type'] == 'm') {
-                //return MovieInfo::getOne($_GET['id'], "item_id");
-                return $this->html(MovieInfo::getOne($_GET['id'], "item_id"));
+                $allItems = [];
+                $allItems['item'] = MovieInfo::getOne($_GET['id'], "item_id");
+                if ($this->app->getAuth()->isLogged()){
+                    $allItems['isInList'] = SeriesInfo::isInList($_SESSION["user"]->getUserId(), $_GET['id']);
+                }else{
+                    $allItems['isInList'] = false;
+                }
+                return $this->html($allItems);
+                //return $this->html(MovieInfo::getOne($_GET['id'], "item_id"));
             }
             if ($_GET['type'] == 's') {
-                //return SeriesInfo::getOne($_GET['id'], "item_id");
-                return $this->html(SeriesInfo::getOne($_GET['id'], "item_id"));
+                $allItems = [];
+                $allItems['item'] = SeriesInfo::getOne($_GET['id'], "item_id");
+                if ($this->app->getAuth()->isLogged()){
+                    $allItems['isInList'] = SeriesInfo::isInList($_SESSION["user"]->getUserId(), $_GET['id']);
+                }else{
+                    $allItems['isInList'] = false;
+                }
+                return $this->html($allItems);
+                //return $this->html(SeriesInfo::getOne($_GET['id'], "item_id"));
             }
         }
     }
