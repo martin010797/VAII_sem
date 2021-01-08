@@ -370,6 +370,27 @@ ORDER BY item_id DESC");
         }
     }
 
+    static public function addToList($item_id ,$user_id){
+        self::connect();
+        try {
+            $sql = 'INSERT INTO user_items(item_id, user_id) VALUES (?, ?)';
+            self::$connection->prepare($sql)->execute([$item_id, $user_id]);
+
+        } catch (PDOException $e) {
+            echo "Nepodarilo sa zapisat do DB:" . $e->getMessage();
+        }
+    }
+
+    static public function removeFromList($item_id ,$user_id){
+        self::connect();
+        try {
+            $sql = "DELETE FROM user_items WHERE item_id=? AND user_id=?";
+            self::$connection->prepare($sql)->execute([$item_id, $user_id]);
+        } catch (PDOException $e) {
+            throw new \Exception('Query failed: ' . $e->getMessage());
+        }
+    }
+
     /**
      * @return null
      */

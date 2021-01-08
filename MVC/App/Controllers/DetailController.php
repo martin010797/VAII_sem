@@ -127,6 +127,49 @@ class DetailController extends AControllerBase
         }
     }
 
+    public function addToList(){
+        if (!$this->app->getAuth()->isLogged() || $this->app->getAuth()->isMaintainer()){
+            return $this->redirect("?c=Home");
+        }else{
+            if (Model::isInList($_SESSION["user"]->getUserId(), $_GET['id'])){
+                if (isset($_GET['id']) && isset($_GET['type'])){
+                    return $this->redirect("?c=Detail&id=" . $_GET['id'] . "&type=" . $_GET['type']);
+                }else{
+                    return $this->redirect("?c=Home");
+                }
+            }else{
+                if (isset($_GET['id']) && isset($_GET['type'])){
+                    Model::addToList($_GET['id'], $_SESSION['user']->getUserId());
+                    return $this->redirect("?c=Detail&id=" . $_GET['id'] . "&type=" . $_GET['type']);
+                }else{
+                    return $this->redirect("?c=Home");
+                }
+            }
+
+        }
+    }
+
+    public function removeFromList(){
+        if (!$this->app->getAuth()->isLogged() || $this->app->getAuth()->isMaintainer()){
+            return $this->redirect("?c=Home");
+        }else{
+            if (!Model::isInList($_SESSION["user"]->getUserId(), $_GET['id'])){
+                if (isset($_GET['id']) && isset($_GET['type'])){
+                    return $this->redirect("?c=Detail&id=" . $_GET['id'] . "&type=" . $_GET['type']);
+                }else{
+                    return $this->redirect("?c=Home");
+                }
+            }else{
+                if (isset($_GET['id']) && isset($_GET['type'])){
+                    Model::removeFromList($_GET['id'], $_SESSION['user']->getUserId());
+                    return $this->redirect("?c=Detail&id=" . $_GET['id'] . "&type=" . $_GET['type']);
+                }else{
+                    return $this->redirect("?c=Home");
+                }
+            }
+        }
+    }
+
     static public function validation($title, $description, $numberOfSeasons, $duration)
     {
         //title validation

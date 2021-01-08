@@ -40,9 +40,9 @@
             $id = $_GET['id'];
             if ($auth->isLogged() && !$auth->isMaintainer()) {
                 if ($data['isInList']){?>
-                    <button type="button" class="btn btn-warning mb-3" onclick="location.href='#'">Odobrať zo zoznamu</button>
+                    <button type="button" class="btn btn-warning mb-3" onclick="location.href='?c=Detail&a=removeFromList&id=<?= $id ?>&type=<?= $typ ?>'">Odobrať zo zoznamu</button>
                 <?php }else{ ?>
-                    <button type="button" class="btn btn-success mb-3" onclick="location.href='#'">Pridať do zoznamu</button>
+                    <button type="button" class="btn btn-success mb-3" onclick="location.href='?c=Detail&a=addToList&id=<?= $id ?>&type=<?= $typ ?>'">Pridať do zoznamu</button>
                 <?php } ?>
             <?php } ?>
 
