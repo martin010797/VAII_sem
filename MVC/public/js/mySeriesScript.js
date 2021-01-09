@@ -39,8 +39,11 @@ class MySeries {
                     html += `</div>`;
                 }
             });
-            if (rw !== 4){
+            if (rw !== 4 && firstTime === false){
                 html += `</div>`;
+            }
+            if (firstTime === true){
+                html += `<div class="jumbotron text-center shadow"><h2>Žiadne seriály nie sú v zozname.</h2> </div>`
             }
             series.innerHTML = html;
         }catch (e) {

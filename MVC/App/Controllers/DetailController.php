@@ -24,7 +24,6 @@ class DetailController extends AControllerBase
                     $allItems['isInList'] = false;
                 }
                 return $this->html($allItems);
-                //return $this->html(MovieInfo::getOne($_GET['id'], "item_id"));
             }
             if ($_GET['type'] == 's') {
                 $allItems = [];
@@ -35,7 +34,6 @@ class DetailController extends AControllerBase
                     $allItems['isInList'] = false;
                 }
                 return $this->html($allItems);
-                //return $this->html(SeriesInfo::getOne($_GET['id'], "item_id"));
             }
         }
     }
@@ -84,7 +82,6 @@ class DetailController extends AControllerBase
                     $item->setTitle($title);
                     $item->setDescription($description);
                     $item->setDuration($duration);
-                    //return [$item, $itemValidation];
                     return $this->html([$item, $itemValidation]);
                 }
             }
@@ -108,20 +105,15 @@ class DetailController extends AControllerBase
                 }
             }
 
-
         } else {
             if (isset($_GET['id']) && isset($_GET['type'])) {
                 if ($_GET['type'] == 'm') {
                     $item = MovieInfo::getOne($_GET['id'], "item_id");
-                    //return [$item, null];
                     return $this->html([$item, null]);
-                    //return MovieInfo::getOne($_GET['id'], "item_id");
                 }
                 if ($_GET['type'] == 's') {
                     $item = SeriesInfo::getOne($_GET['id'], "item_id");
-                    //return [$item, null];
                     return $this->html([$item, null]);
-                    //return SeriesInfo::getOne($_GET['id'] , "item_id");
                 }
             }
         }

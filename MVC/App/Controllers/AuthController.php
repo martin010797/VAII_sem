@@ -12,7 +12,11 @@ class AuthController extends \App\Core\AControllerBase
      */
     public function index()
     {
-        return $this->redirect('?c=auth&a=login');
+        if ($this->app->getAuth()->isLogged()) {
+            return $this->redirect('?c=home');
+        }else{
+            return $this->redirect('?c=auth&a=login');
+        }
     }
 
     public function login()
@@ -44,16 +48,11 @@ class AuthController extends \App\Core\AControllerBase
             return $this->redirect('?c=home');
         } else {
             $formData = $this->app->getRequest()->getPost();
-            //return $this->html();
             if (isset($formData['signup'])) {
                 $userValidation = null;
                 $userValidation = $this->signupValidation($formData['email'], $formData['password'], $formData['repeatPassword']);
                 if ($userValidation == null) {
-                    //temp
-                    //return $this->redirect('?c=home');
-                    //zavola sa funkcia v autentifikatore ktora overi ci nema nikto rovnaky mail
                     $signedUp = $this->app->getAuth()->signup($formData['email'], password_hash($formData['password'], PASSWORD_DEFAULT));
-                    //pokial nie tak ho prida do databazy, prihlasi a redirectne na home
                     if ($signedUp){
                         $logged = $this->app->getAuth()->login($formData['email'], $formData['password']);
                         return $this->redirect('?c=home');

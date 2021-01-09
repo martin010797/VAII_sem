@@ -40,8 +40,11 @@ class MyMovies {
                     html += `</div>`;
                 }
             });
-            if (rw !== 4){
+            if (rw !== 4  && firstTime === false){
                 html += `</div>`;
+            }
+            if (firstTime === true){
+                html += `<div class="jumbotron text-center shadow"><h2>Žiadne filmy nie sú v zozname.</h2> </div>`
             }
             movies.innerHTML = html;
         }catch (e) {

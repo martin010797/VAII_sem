@@ -13,12 +13,15 @@ class MoviesController extends AControllerBase
 
     public function index()
     {
-        //return MovieInfo::getAll();
         return $this->html(MovieInfo::getAll());
     }
 
     public function mymovies(){
-        return $this->html();
+        if (!$this->app->getAuth()->isLogged() || $this->app->getAuth()->isMaintainer()) {
+            return $this->redirect('?c=home');
+        }else{
+            return $this->html();
+        }
     }
 
     public function jsonMovies(){

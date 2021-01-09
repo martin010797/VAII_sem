@@ -1,6 +1,9 @@
 body{
     background-color: lightgray;
 }
+.form-inline .btn{
+    background-color: dodgerblue;
+}
 .navbar .navbar-brand{
     color: dodgerblue;
 }

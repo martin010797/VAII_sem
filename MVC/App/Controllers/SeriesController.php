@@ -17,7 +17,11 @@ class SeriesController extends AControllerBase
     }
 
     public function myseries(){
-        return $this->html();
+        if (!$this->app->getAuth()->isLogged() || $this->app->getAuth()->isMaintainer()) {
+            return $this->redirect('?c=home');
+        }else{
+            return $this->html();
+        }
     }
 
     public function jsonSeries(){

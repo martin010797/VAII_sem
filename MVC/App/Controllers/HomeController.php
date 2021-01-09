@@ -17,13 +17,11 @@ class HomeController extends AControllerBase
         $allItems['movie'] = MovieInfo::getRecentlyAddedItems();
         $allItems['series'] = SeriesInfo::getRecentlyAddedItems();
         return $this->html($allItems);
-        //return $allItems;
     }
 
     public function insert()
     {
-        if (!$this->app->getAuth()->isLogged()){
-            //ak nie je prihlaseny tak ho hodi na stranku s prihlasenim
+        if (!$this->app->getAuth()->isMaintainer()){
             return $this->redirect("?c=auth&a=login");
         }else{
             $itemValidation = null;
@@ -47,7 +45,6 @@ class HomeController extends AControllerBase
                         $movie = new MovieInfo($title, $description, $image, $duration);
                         $movie->saveMovie();
                         header("Location: http://localhost/VAII_sem/MVC?c=Home");
-                        //header("Location: http://localhost/VAII_sem/MVC?c=Home&a=alert");
                         die();
                     }else{
                         $item = [];
@@ -55,7 +52,6 @@ class HomeController extends AControllerBase
                         $item[] = $description;
                         $item[] = "m";
                         $item[] = $duration;
-                        //return [$item, $itemValidation];
                         return $this->html([$item, $itemValidation]);
                     }
                 }
@@ -75,7 +71,6 @@ class HomeController extends AControllerBase
                         $item[] = $description;
                         $item[] = "s";
                         $item[] = $numberOfSeasons;
-                        //return [$item, $itemValidation];
                         return $this->html([$item, $itemValidation]);
                     }
                 }

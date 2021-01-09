@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+<nav class="navbar navbar-expand-xl bg-dark navbar-dark fixed-top">
     <a class="navbar-brand justify-content-center" href="?c=Home">What to watch</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar, #rightSideBar">
         <span class="navbar-toggler-icon"></span>
@@ -70,7 +70,16 @@
             </li>
             <?php } ?>
             <?php
-            if ($auth->isLogged()) { ?>
+            if ($auth->isLogged()) {
+                if ($auth->isMaintainer()){?>
+                    <li class="nav-item">
+                        <a class=" nav-link" style="color: dodgerblue">Správca</a>
+                    </li>
+                <?php }else{ ?>
+                <li class="nav-item">
+                    <a class=" nav-link" style="color: dodgerblue"><?= $auth->getLoggedUser()->getEmail() ?></a>
+                </li>
+                <?php } ?>
             <li class="nav-item">
                 <a class=" nav-link text-light" href="?c=auth&a=logout">Odhlásenie</a>
             </li>

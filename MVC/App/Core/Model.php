@@ -16,7 +16,6 @@ use PDOException;
 abstract class Model implements \JsonSerializable
 {
     private static $connection = null;
-    //private static $db = null;
     private static $pkColumn = 'id';
 
     abstract static public function setDbColumns();
@@ -42,23 +41,6 @@ abstract class Model implements \JsonSerializable
     }
 
     /**
-     * Creates a new connection to DB, if connection already exists, returns the existing one
-     */
-    /*private static function connect()
-    {
-        $config = App::getConfig();
-        try {
-            if (self::$db == null) {
-                self::$db = new PDO('mysql:dbname=' . $config::DB_NAME . ';host=' . $config::DB_HOST, $config::DB_USER, $config::DB_PASS);
-                self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            }
-        } catch (PDOException $e) {
-            throw new \Exception('Connection failed: ' . $e->getMessage());
-        }
-    }*/
-
-    //prerabany connect
-    /**
      * Gets DB connection for other model methods
      * @return null
      * @throws \Exception
@@ -67,17 +49,6 @@ abstract class Model implements \JsonSerializable
     {
         self::$connection = Connection::connect();
     }
-
-
-    /**
-     * Gets DB connection for additional model methods
-     * @return null
-     */
-    /*protected static function getConnection() : PDO
-    {
-        self::connect();
-        return self::$db;
-    }*/
 
     /**
      * Return an array of models from DB
@@ -119,12 +90,7 @@ abstract class Model implements \JsonSerializable
     {
         self::connect();
         try {
-            //nove
-            //$sql = "SELECT * FROM " . self::getTableName();
-            //$stmt = self::$connection->prepare($sql);
             $stmt = self::$connection->query("SELECT * FROM " . self::getTableName());
-            //koniec noveho
-            //$stmt = self::$db->query("SELECT * FROM " . self::getTableName());
             $dbModels = $stmt->fetchAll();
             $models = [];
             foreach ($dbModels as $model) {
@@ -140,14 +106,10 @@ abstract class Model implements \JsonSerializable
             throw new \Exception('Query failed: ' . $e->getMessage());
         }
     }
+
     static public function getRecentlyAddedItems(){
         self::connect();
         try {
-            /*stare
-             * $stmt = self::$db->query("SELECT * FROM (
-    SELECT * FROM " . self::getTableName() . " ORDER BY item_id DESC LIMIT 5
-) sub
-ORDER BY item_id DESC");*/
             $stmt = self::$connection->query("SELECT * FROM (
     SELECT * FROM " . self::getTableName() . " ORDER BY item_id DESC LIMIT 5
 ) sub
@@ -179,8 +141,6 @@ ORDER BY item_id DESC");
         self::connect();
         try {
             $sql = "SELECT * FROM " . self::getTableName() . " WHERE $columnName=$id";
-            //stare
-            //$stmt = self::$db->prepare($sql);
             $stmt = self::$connection->prepare($sql);
             $stmt->execute([$id]);
             $model = $stmt->fetch();
@@ -362,9 +322,6 @@ ORDER BY item_id DESC");
             }else{
                 return true;
             }
-            /*foreach ($dbModels as $model) {
-
-            }*/
         }catch (PDOException $e){
             throw new \Exception('Query failed: ' . $e->getMessage());
         }

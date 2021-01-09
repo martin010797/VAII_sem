@@ -1,6 +1,9 @@
 body{
     background-color: lightgrey;
 }
+.form-inline .btn{
+    background-color: dodgerblue;
+}
 #loginRegContainer{
     background-color: skyblue;
     width: 500px;
