@@ -8,9 +8,13 @@
         <div class="col-md-3 border pt-3 text-center">
             <?php
             /** @var \App\MovieInfo $data */
-            echo '<img src=data:image;base64,' . $data['item']->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
+            if (!is_null($data['item']->getImageName())){
+                echo '<img src="MVC/public/images/'. $data['item']->getImageName() . '" class="img-thumbnail" alt="Cinque Terre">';
+            }else{
+                echo '<img src=data:image;base64,' . $data['item']->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
+            }
+            //echo '<img src=data:image;base64,' . $data['item']->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
             ?>
-            <!--<p>Release date: 2009</p>-->
             <?php
             if ($_GET['type'] == 'm'){
                 echo '<p>Dlžka trvania: ' . $data['item']->getDuration() . '</p>';

@@ -22,7 +22,12 @@
         if (is_null($series->getImage())) {
             echo '<img src="../mvc-master/public/images/no_image.png" class="img-thumbnail" alt="Cinque Terre">';
         } else {
-            echo '<img src=data:image;base64,' . $series->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
+            if (!is_null($series->getImageName())){
+                echo '<img src="MVC/public/images/'. $series->getImageName() . '" class="img-thumbnail" alt="Cinque Terre">';
+            }else{
+                echo '<img src=data:image;base64,' . $series->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
+            }
+            //echo '<img src=data:image;base64,' . $series->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
         }
         echo '<h3><a href="?c=Detail&id=' . $series->getItem_Id() .'&type=s">' . $series->getTitle() . '</a>';
         echo '</h3>';

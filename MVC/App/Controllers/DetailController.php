@@ -58,6 +58,8 @@ class DetailController extends AControllerBase
         $itemValidation = null;
         $item = null;
         if (isset($_POST['submit'])) {
+            $imageName = $_FILES['image']['name'];
+
             $image = addslashes($_FILES['image']['tmp_name']);
             $image = file_get_contents($image);
             $image = base64_encode($image);
@@ -72,7 +74,7 @@ class DetailController extends AControllerBase
                 $itemValidation = $this->validation($title, $description, null, $duration);
                 //ak presiel validaciou tak moze ulozit
                 if ($itemValidation == null) {
-                    $movie = new MovieInfo($title, $description, $image, $duration);
+                    $movie = new MovieInfo($title, $description, $image, $duration, $imageName);
                     $movie->setId($_POST["id"]);
                     $movie->editMovie();
                     header("Location: http://localhost/VAII_sem/MVC?c=Movies");
@@ -90,7 +92,7 @@ class DetailController extends AControllerBase
 
                 $itemValidation = $this->validation($title, $description, $numberOfSeasons, null);
                 if ($itemValidation == null) {
-                    $series = new SeriesInfo($title, $description, $image, $numberOfSeasons);
+                    $series = new SeriesInfo($title, $description, $image, $numberOfSeasons, $imageName);
                     $series->setItemId($_POST["id"]);
                     $series->editSeries();
                     header("Location: http://localhost/VAII_sem/MVC?c=Series");

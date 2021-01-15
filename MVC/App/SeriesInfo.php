@@ -11,6 +11,7 @@ class SeriesInfo extends Model
     protected $title;
     protected $description;
     protected $image;
+    protected $image_name;
     protected $number_of_seasons;
     protected $type;
 
@@ -30,13 +31,14 @@ class SeriesInfo extends Model
         return $this->type;
     }
 
-    public function __construct($title = "", $description = "", $image = "", $numberOfSeasons = "")
+    public function __construct($title = "", $description = "", $image = "", $numberOfSeasons = "", $image_name = "")
     {
         $this->title = $title;
         $this->description = $description;
         $this->image = $image;
         $this->number_of_seasons = $numberOfSeasons;
         $this->type = "s";
+        $this->image_name = $image_name;
     }
 
     /**
@@ -112,9 +114,25 @@ class SeriesInfo extends Model
         return $this->item_id;
     }
 
+    /**
+     * @return mixed|string
+     */
+    public function getImageName()
+    {
+        return $this->image_name;
+    }
+
+    /**
+     * @param mixed|string $image_name
+     */
+    public function setImageName($image_name): void
+    {
+        $this->image_name = $image_name;
+    }
+
     static public function setDbColumns()
     {
-        return ['item_id', 'title', 'description', 'image', 'release_date', 'series_id', 'number_of_seasons'];
+        return ['item_id', 'title', 'description', 'image', 'release_date', 'image_name', 'series_id', 'number_of_seasons'];
     }
 
     static public function setTableName()
