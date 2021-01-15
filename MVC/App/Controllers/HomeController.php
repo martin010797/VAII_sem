@@ -80,6 +80,15 @@ class HomeController extends AControllerBase
         }
     }
 
+    public function search(){
+        if (isset($_POST['search'])) {
+            $allItems = [];
+            $allItems['movie'] = MovieInfo::searchMovies($_POST['text']);
+            $allItems['series'] = SeriesInfo::searchSeries($_POST['text']);
+            return $this->html($allItems);
+        }
+    }
+
 
 
 

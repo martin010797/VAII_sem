@@ -46,9 +46,9 @@
     </div>
 
     <div class="collapse navbar-collapse" id="rightSideBar">
-        <form id="searchBar" class="form-inline" action="#">
-            <input class="form-control mr-sm-2" type="text" placeholder="Hľadať">
-            <button class="btn btn-info" type="submit">Vyhľadať</button>
+        <form id="searchBar" method="post" enctype="multipart/form-data" class="form-inline" action="?c=Home&a=search">
+            <input class="form-control mr-sm-2" type="text" placeholder="Hľadať" name="text">
+            <button class="btn btn-info" type="submit" name="search" >Vyhľadať</button>
         </form>
         <ul class="navbar-nav ml-auto">
             <?php

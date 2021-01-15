@@ -1,4 +1,4 @@
-class Detail {
+/*class Detail {
     constructor() {
     }
 
@@ -25,4 +25,4 @@ class Detail {
 }
 document.addEventListener('DOMContentLoaded', () => {
     var detail = new Detail();
-});
+});*/

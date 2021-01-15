@@ -82,6 +82,46 @@ abstract class Model implements \JsonSerializable
         }
     }
 
+    static public function searchMovies($searchWord){
+        self::connect();
+        try {
+            $stmt = self::$connection->query("SELECT * FROM item JOIN movie USING (item_id) WHERE title LIKE '%{$searchWord}%'");
+            $dbModels = $stmt->fetchAll();
+            $models = [];
+            foreach ($dbModels as $model) {
+                $tmpModel = new static();
+                $data = array_fill_keys(self::getDbColumns(), null);
+                foreach ($data as $key => $item) {
+                    $tmpModel->$key = $model[$key];
+                }
+                $models[] = $tmpModel;
+            }
+            return $models;
+        } catch (PDOException $e) {
+            throw new \Exception('Query failed: ' . $e->getMessage());
+        }
+    }
+
+    static public function searchSeries($searchWord){
+        self::connect();
+        try {
+            $stmt = self::$connection->query("SELECT * FROM item JOIN series USING (item_id) WHERE title LIKE '%{$searchWord}%'");
+            $dbModels = $stmt->fetchAll();
+            $models = [];
+            foreach ($dbModels as $model) {
+                $tmpModel = new static();
+                $data = array_fill_keys(self::getDbColumns(), null);
+                foreach ($data as $key => $item) {
+                    $tmpModel->$key = $model[$key];
+                }
+                $models[] = $tmpModel;
+            }
+            return $models;
+        } catch (PDOException $e) {
+            throw new \Exception('Query failed: ' . $e->getMessage());
+        }
+    }
+
     /**
      * Return an array of models from DB
      * @return static[]
