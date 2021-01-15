@@ -30,11 +30,11 @@ class MovieInfo extends Model
         $this->duration = $duration;
     }
 
-    public function __construct($title = "", $description = "", $image = "", $duration = "", $image_name = "")
+    public function __construct($title = "", $description = "", $duration = "", $image_name = "")
     {
         $this->title = $title;
         $this->description = $description;
-        $this->image = $image;
+        //$this->image = $image;
         $this->duration = $duration;
         $this->type = "m";
         $this->image_name = $image_name;
@@ -132,7 +132,7 @@ class MovieInfo extends Model
     static public function setDbColumns()
     {
         //return ['id', 'title', 'description', 'image'];
-        return ['item_id', 'title', 'description', 'image', 'release_date', 'image_name', 'movie_id', 'duration'];
+        return ['item_id', 'title', 'description', 'image_name', 'movie_id', 'duration'];
     }
 
     static public function setTableName()

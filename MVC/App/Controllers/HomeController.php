@@ -27,17 +27,11 @@ class HomeController extends AControllerBase
             $itemValidation = null;
             $item = null;
             if (isset($_POST['submit'])) {
-                //$target = "MVC/public/imagesTest/".basename($_FILES['image']['name']);
                 $imageName = $_FILES['image']['name'];
-                /*if (move_uploaded_file($_FILES['tmp_name']['name'], $target)){
-                    $msg = "Uploaded succesfully";
-                }else{
-                    $msg = "there was problem uploading image";
-                }*/
 
-                $image = addslashes($_FILES['image']['tmp_name']);
+                /*$image = addslashes($_FILES['image']['tmp_name']);
                 $image = file_get_contents($image);
-                $image = base64_encode($image);
+                $image = base64_encode($image);*/
 
                 $title = $_POST["title"];
                 $description = $_POST["popis_prvku"];
@@ -49,7 +43,7 @@ class HomeController extends AControllerBase
                     $itemValidation = DetailController::validation($title, $description, null, $duration);
                     //ak presiel validaciou tak moze ulozit
                     if ($itemValidation == null){
-                        $movie = new MovieInfo($title, $description, $image, $duration, $imageName);
+                        $movie = new MovieInfo($title, $description, $duration, $imageName);
                         $movie->saveMovie();
                         header("Location: http://localhost/VAII_sem/MVC?c=Home");
                         die();
@@ -68,7 +62,7 @@ class HomeController extends AControllerBase
                     $itemValidation = DetailController::validation($title, $description, $numberOfSeasons, null);
                     //ak presiel validaciou tak moze ulozit
                     if ($itemValidation == null){
-                        $series = new SeriesInfo($title, $description, $image, $numberOfSeasons, $imageName);
+                        $series = new SeriesInfo($title, $description, $numberOfSeasons, $imageName);
                         $series->saveSeries();
                         header("Location: http://localhost/VAII_sem/MVC?c=Home");
                         die();

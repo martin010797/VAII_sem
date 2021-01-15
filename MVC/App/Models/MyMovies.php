@@ -11,18 +11,18 @@ class MyMovies extends MovieInfo
 {
     protected $user_id;
 
-    public function __construct($title = "", $description = "", $image = "", $duration = "")
+    public function __construct($title = "", $description = "", $duration = "")
     {
         $this->title = $title;
         $this->description = $description;
-        $this->image = $image;
+        //$this->image = $image;
         $this->duration = $duration;
         $this->type = "m";
     }
 
     static public function setDbColumns()
     {
-        return ['item_id', 'title', 'description', 'image', 'release_date', 'movie_id', 'duration', 'user_item_id', 'user_id'];
+        return ['item_id', 'title', 'description', 'image_name', 'movie_id', 'duration', 'user_item_id', 'user_id'];
     }
 
     static public function setTableName()

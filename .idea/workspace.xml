@@ -25,13 +25,16 @@
       <change beforePath="$PROJECT_DIR$/MVC/App/Controllers/DetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Controllers/DetailController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Core/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/App/Models/MyMovies.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Models/MyMovies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/App/Models/MySeries.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Models/MySeries.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/MovieInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/MovieInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/SeriesInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/SeriesInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Detail/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Detail/index.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Home/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Home/index.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Movies/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Movies/index.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Series/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Series/index.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Views/root.layout.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/root.layout.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/public/js/myMoviesScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/public/js/myMoviesScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/public/js/mySeriesScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/public/js/mySeriesScript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +117,7 @@
       <workItem from="1610020767641" duration="12310000" />
       <workItem from="1610105967375" duration="5308000" />
       <workItem from="1610182634537" duration="8164000" />
-      <workItem from="1610700988931" duration="9636000" />
+      <workItem from="1610700988931" duration="13674000" />
     </task>
     <servers />
   </component>
@@ -162,54 +165,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609666620556" />
-    <state width="1093" height="236" key="GridCell.Tab.0.bottom" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.0.bottom" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.0.center" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
+    <state width="1026" height="288" key="GridCell.Tab.0.center" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.0.left" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
+    <state width="1026" height="288" key="GridCell.Tab.0.left" timestamp="1610715474235">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.0.right" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474235" />
+    <state width="1026" height="288" key="GridCell.Tab.0.right" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.1.bottom" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
+    <state width="1026" height="288" key="GridCell.Tab.1.bottom" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.1.center" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
+    <state width="1026" height="288" key="GridCell.Tab.1.center" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.1.left" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
+    <state width="1026" height="288" key="GridCell.Tab.1.left" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.1.right" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
+    <state width="1026" height="288" key="GridCell.Tab.1.right" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.2.bottom" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
+    <state width="1026" height="288" key="GridCell.Tab.2.bottom" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.2.center" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
+    <state width="1026" height="288" key="GridCell.Tab.2.center" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.2.left" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
+    <state width="1026" height="288" key="GridCell.Tab.2.left" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
-    <state width="1093" height="236" key="GridCell.Tab.2.right" timestamp="1610707008145">
+    <state width="1026" height="288" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
+    <state width="1026" height="288" key="GridCell.Tab.2.right" timestamp="1610715474236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="236" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610707008145" />
+    <state width="1026" height="288" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610715474236" />
     <state x="1148" y="288" key="NewPhpClassDialog" timestamp="1609946711210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -238,14 +241,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1170" y="328" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609770361925" />
-    <state x="756" y="340" width="407" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1609677217717">
+    <state x="756" y="340" width="407" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1610717718855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="756" y="340" width="407" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609677217717" />
-    <state x="995" y="286" width="686" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610707317566">
+    <state x="756" y="340" width="407" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610717718855" />
+    <state x="993" y="327" width="686" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610717725962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="995" y="286" width="686" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610707317566" />
+    <state x="993" y="327" width="686" height="524" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610717725962" />
     <state x="1096" y="244" key="run.anything.popup" timestamp="1609581038400">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -203,8 +203,8 @@ ORDER BY item_id DESC");
     public function saveMovie(){
         self::connect();
         try {
-            $sql = 'INSERT INTO item(title, description, image, image_name) VALUES (?, ?, ?, ?)';
-            self::$connection->prepare($sql)->execute([$this->title, $this->description, $this->image, $this->image_name]);
+            $sql = 'INSERT INTO item(title, description, image_name) VALUES (?, ?, ?)';
+            self::$connection->prepare($sql)->execute([$this->title, $this->description, $this->image_name]);
             $id = self::$connection->query('SELECT MAX(item_id) FROM item');
             $idValue = -1;
             foreach ($id as $idVal) {
@@ -221,8 +221,8 @@ ORDER BY item_id DESC");
     public function editMovie(){
         self::connect();
         try {
-            $sql = 'UPDATE item SET title=?, description=?, image=?, image_name=? WHERE item_id=?';
-            self::$connection->prepare($sql)->execute([$this->title, $this->description, $this->image, $this->image_name, $this->item_id]);
+            $sql = 'UPDATE item SET title=?, description=?, image_name=? WHERE item_id=?';
+            self::$connection->prepare($sql)->execute([$this->title, $this->description, $this->image_name, $this->item_id]);
             $sql = 'UPDATE movie SET duration=? WHERE item_id=?';
             self::$connection->prepare($sql)->execute([$this->duration, $this->item_id]);
 
@@ -234,8 +234,8 @@ ORDER BY item_id DESC");
     public function editSeries(){
         self::connect();
         try {
-            $sql = 'UPDATE item SET title=?, description=?, image=?, image_name=? WHERE item_id=?';
-            self::$connection->prepare($sql)->execute([$this->title, $this->description, $this->image, $this->image_name, $this->item_id]);
+            $sql = 'UPDATE item SET title=?, description=?, image_name=? WHERE item_id=?';
+            self::$connection->prepare($sql)->execute([$this->title, $this->description, $this->image_name, $this->item_id]);
             $sql = 'UPDATE series SET number_of_seasons=? WHERE item_id=?';
             self::$connection->prepare($sql)->execute([$this->number_of_seasons, $this->item_id]);
 
@@ -247,8 +247,8 @@ ORDER BY item_id DESC");
     public function saveSeries(){
         self::connect();
         try {
-            $sql = 'INSERT INTO item(title, description, image, image_name) VALUES (?, ?, ?, ?)';
-            self::$connection->prepare($sql)->execute([$this->title, $this->description, $this->image, $this->image_name]);
+            $sql = 'INSERT INTO item(title, description, image_name) VALUES (?, ?, ?)';
+            self::$connection->prepare($sql)->execute([$this->title, $this->description, $this->image_name]);
             $id = self::$connection->query('SELECT MAX(item_id) FROM item');
             $idValue = -1;
             foreach ($id as $idVal) {

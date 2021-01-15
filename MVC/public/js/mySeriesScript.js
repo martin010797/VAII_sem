@@ -23,8 +23,11 @@ class MySeries {
                     firstTime = false;
                 }
                 html += `<div class="col-md border pt-3">`;
-                if (series.image != null){
-                    html += `<img src=data:image;base64,${series.image} class="img-thumbnail" alt="Cinque Terre">`;
+                if (series.image_name != null){
+                    html += `<img src="MVC/public/images/${series.image_name}" class="img-thumbnail" alt="Cinque Terre">`
+                }else {
+                    html += `<img src="MVC/public/images/no_image.png" class="img-thumbnail" alt="Cinque Terre">`
+                    //html += `<img src=data:image;base64,${series.image} class="img-thumbnail" alt="Cinque Terre">`;
                 }
                 if (series.item_id != null && series.title != null){
                     html += `<h3><a href="?c=Detail&id=${series.item_id}&type=s">${series.title}</a>`;

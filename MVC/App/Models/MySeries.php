@@ -11,18 +11,18 @@ class MySeries extends SeriesInfo
 {
     protected $user_id;
 
-    public function __construct($title = "", $description = "", $image = "", $numberOfSeasons = "")
+    public function __construct($title = "", $description = "", $numberOfSeasons = "")
     {
         $this->title = $title;
         $this->description = $description;
-        $this->image = $image;
+        //$this->image = $image;
         $this->number_of_seasons = $numberOfSeasons;
         $this->type = "s";
     }
 
     static public function setDbColumns()
     {
-        return ['item_id', 'title', 'description', 'image', 'release_date', 'series_id', 'number_of_seasons', 'user_item_id', 'user_id'];
+        return ['item_id', 'title', 'description', 'image_name', 'series_id', 'number_of_seasons', 'user_item_id', 'user_id'];
     }
 
     static public function setTableName()

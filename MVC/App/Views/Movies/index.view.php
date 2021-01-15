@@ -19,14 +19,12 @@
             }
 
             echo '<div class="col-md border pt-3">';
-            if (is_null($movie->getImage())) {
-                echo '<img src="../mvc-master/public/images/no_image.png" class="img-thumbnail" alt="Cinque Terre">';
-            } else {
-                if (!is_null($movie->getImageName())){
-                    echo '<img src="MVC/public/images/'. $movie->getImageName() . '" class="img-thumbnail" alt="Cinque Terre">';
-                }else{
-                    echo '<img src=data:image;base64,' . $movie->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
-                }
+
+            if (!is_null($movie->getImageName())){
+                echo '<img src="MVC/public/images/'. $movie->getImageName() . '" class="img-thumbnail" alt="Cinque Terre">';
+            }else{
+                echo '<img src="MVC/public/images/no_image.png" class="img-thumbnail" alt="Cinque Terre">';
+                //echo '<img src=data:image;base64,' . $series->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
             }
             echo '<h3><a href="?c=Detail&id=' . $movie->getId() .'&type=m">' . $movie->getTitle() . '</a>';
             echo '</h3>';
