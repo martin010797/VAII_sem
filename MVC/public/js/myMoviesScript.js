@@ -25,7 +25,8 @@ class MyMovies {
                 }
                 html += `<div class="col-md border pt-3">`;
                 if (movie.image_name != null){
-                    html += `<img src="MVC/public/images/${movie.image_name}" class="img-thumbnail" alt="Cinque Terre">`
+                    html += `<img src="MVC/public/images/${movie.image_name}" class="img-thumbnail" onerror="this.onerror=null; this.src='MVC/public/images/no_image.png'" alt="">`;
+                    //html += `<img src="MVC/public/images/${movie.image_name}" class="img-thumbnail" alt="Cinque Terre">`
                 }else {
                     html += `<img src="MVC/public/images/no_image.png" class="img-thumbnail" alt="Cinque Terre">`
 

@@ -24,7 +24,8 @@ class MySeries {
                 }
                 html += `<div class="col-md border pt-3">`;
                 if (series.image_name != null){
-                    html += `<img src="MVC/public/images/${series.image_name}" class="img-thumbnail" alt="Cinque Terre">`
+                    html += `<img src="MVC/public/images/${series.image_name}" class="img-thumbnail" onerror="this.onerror=null; this.src='MVC/public/images/no_image.png'" alt="">`;
+                    //html += `<img src="MVC/public/images/${series.image_name}" class="img-thumbnail" alt="Cinque Terre">`
                 }else {
                     html += `<img src="MVC/public/images/no_image.png" class="img-thumbnail" alt="Cinque Terre">`
                     //html += `<img src=data:image;base64,${series.image} class="img-thumbnail" alt="Cinque Terre">`;

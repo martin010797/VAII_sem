@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2c0de54-9b06-4b00-b90f-ee332c5a39dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/036cf7b0-5dfa-4e15-af44-33749e3255dd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/036cf7b0-5dfa-4e15-af44-33749e3255dd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Controllers/DetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Controllers/DetailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Models/MyMovies.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Models/MyMovies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Models/MySeries.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Models/MySeries.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/MovieInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/MovieInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/SeriesInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/SeriesInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Detail/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Detail/index.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Home/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Home/index.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Movies/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Movies/index.view.php" afterDir="false" />
@@ -117,7 +109,7 @@
       <workItem from="1610020767641" duration="12310000" />
       <workItem from="1610105967375" duration="5308000" />
       <workItem from="1610182634537" duration="8164000" />
-      <workItem from="1610700988931" duration="13674000" />
+      <workItem from="1610700988931" duration="16203000" />
     </task>
     <servers />
   </component>

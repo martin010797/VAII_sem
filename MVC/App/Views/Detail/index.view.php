@@ -9,7 +9,9 @@
             <?php
             /** @var \App\MovieInfo $data */
             if (!is_null($data['item']->getImageName())){
-                echo '<img src="MVC/public/images/'. $data['item']->getImageName() . '" class="img-thumbnail" alt="Cinque Terre">';
+                $name = "'MVC/public/images/no_image.png'";
+                echo '<img src="MVC/public/images/'. $data['item']->getImageName() . '" class="img-thumbnail" onerror="this.onerror=null; this.src=' . $name .'" alt="">';
+                //echo '<img src="MVC/public/images/'. $data['item']->getImageName() . '" class="img-thumbnail" alt="Cinque Terre">';
             }else{
                 echo '<img src="MVC/public/images/no_image.png" class="img-thumbnail" alt="Cinque Terre">';
                 //echo '<img src=data:image;base64,' . $data['item']->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
