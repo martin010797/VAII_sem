@@ -29,7 +29,11 @@
 
         echo '<h3><a href="?c=Detail&id=' . $series->getItem_Id() .'&type=s">' . $series->getTitle() . '</a>';
         echo '</h3>';
-        echo '<p>' . substr($series->getDescription(), 0, 250) . '...</p>';
+        if (strlen($series->getDescription()) > 250){
+            echo '<p>' . substr($series->getDescription(), 0, 250) . '...</p>';
+        }else{
+            echo $series->getDescription();
+        }
         echo "</div>";
 
         if (($rw == 4)){

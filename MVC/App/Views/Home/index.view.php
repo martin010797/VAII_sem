@@ -25,7 +25,11 @@
 
             echo '<h3><a href="?c=Detail&id=' . $movie->getId() .'&type=m">' . $movie->getTitle() . '</a>';
             echo '</h3>';
-            echo '<p>' . substr($movie->getDescription(), 0, 380) . '...</p>';
+            if (strlen($movie->getDescription()) > 380){
+                echo '<p>' . substr($movie->getDescription(), 0, 380) . '...</p>';
+            }else{
+                echo $movie->getDescription();
+            }
             echo "</div>";
 
         }
@@ -48,7 +52,11 @@
 
             echo '<h3><a href="?c=Detail&id=' . $series->getItem_Id() .'&type=s">' . $series->getTitle() .  '</a>';
             echo '</h3>';
-            echo '<p>' . substr($series->getDescription(), 0, 380) . '...</p>';
+            if (strlen($series->getDescription()) > 380){
+                echo '<p>' . substr($series->getDescription(), 0, 380) . '...</p>';
+            }else{
+                echo $series->getDescription();
+            }
             echo "</div>";
 
         }

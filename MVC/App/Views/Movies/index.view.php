@@ -30,7 +30,11 @@
             }
             echo '<h3><a href="?c=Detail&id=' . $movie->getId() .'&type=m">' . $movie->getTitle() . '</a>';
             echo '</h3>';
-            echo '<p>' . substr($movie->getDescription(), 0, 250) . '...</p>';
+            if (strlen($movie->getDescription()) > 250){
+                echo '<p>' . substr($movie->getDescription(), 0, 250) . '...</p>';
+            }else{
+                echo $movie->getDescription();
+            }
             echo "</div>";
 
             if (($rw == 4)){

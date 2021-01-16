@@ -20,52 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2c0de54-9b06-4b00-b90f-ee332c5a39dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/RickAndMorty.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/The_Queen's_Gambit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/blackMirror.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/comm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/community.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/flashforward.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/gentlemen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/got.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/gympl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/hugerGames.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/inception.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/interstellar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/johnny.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/jurassic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/lock.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/lock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/lucy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/millers.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/mindhunter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/narcos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/nerve.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/nowYouSeeMe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/peaky.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/saul.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/sheldon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/socialNetwork.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/spider.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/tbbt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/ted.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/titanic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/walkingDead.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/witcher.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/public/images/wolf.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Controllers/DetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Controllers/DetailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Views/Detail/edit.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Detail/edit.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Views/Detail/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Detail/index.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Home/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Home/index.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Views/Home/search.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Home/search.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Movies/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Movies/index.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/App/Views/Movies/mymovies.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Movies/mymovies.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Series/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Series/index.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/App/Views/root.layout.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/root.layout.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/public/css.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/public/css/profile_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/App/Views/Series/myseries.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Series/myseries.view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +109,7 @@
       <workItem from="1610105967375" duration="5308000" />
       <workItem from="1610182634537" duration="8164000" />
       <workItem from="1610700988931" duration="25564000" />
-      <workItem from="1610787393632" duration="12541000" />
+      <workItem from="1610787393632" duration="14431000" />
     </task>
     <servers />
   </component>
