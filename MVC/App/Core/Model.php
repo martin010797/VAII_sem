@@ -130,7 +130,7 @@ abstract class Model implements \JsonSerializable
     {
         self::connect();
         try {
-            $stmt = self::$connection->query("SELECT * FROM " . self::getTableName());
+            $stmt = self::$connection->query("SELECT * FROM " . self::getTableName() . " ORDER BY item_id DESC");
             $dbModels = $stmt->fetchAll();
             $models = [];
             foreach ($dbModels as $model) {

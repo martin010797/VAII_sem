@@ -15,7 +15,7 @@
         <div id="titlesOfForm">
             Názov
         </div>
-        <input required type="text" class="form-control mb-2" name="title" placeholder="Vlož názov" value='<?= $data[0]->getTitle() ?>'>
+        <input required type="text" class="form-control mb-2" name="title" placeholder="Vlož názov" value="<?= $data[0]->getTitle() ?>">
         <?php if (isset($data[1][0])) {
             foreach ($data[1][0] as $error) {
                 ?>

@@ -16,7 +16,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!--<link rel="stylesheet" href="../../public/css/main_page_style.css">-->
 </head>
 <body>
 
@@ -93,7 +92,6 @@
 <div class="web-content pt-5">
     <?= $contentHTML ?>
 </div>
-
 
 </body>
 </html>

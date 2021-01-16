@@ -29,10 +29,6 @@ class HomeController extends AControllerBase
             if (isset($_POST['submit'])) {
                 $imageName = $_FILES['image']['name'];
 
-                /*$image = addslashes($_FILES['image']['tmp_name']);
-                $image = file_get_contents($image);
-                $image = base64_encode($image);*/
-
                 $title = $_POST["title"];
                 $description = $_POST["popis_prvku"];
 
@@ -45,7 +41,7 @@ class HomeController extends AControllerBase
                     if ($itemValidation == null){
                         $movie = new MovieInfo($title, $description, $duration, $imageName);
                         $movie->saveMovie();
-                        header("Location: http://localhost/VAII_sem/MVC?c=Home");
+                        header("Location: http://localhost/VAII_sem/MVC?c=Movies");
                         die();
                     }else{
                         $item = [];
@@ -64,7 +60,7 @@ class HomeController extends AControllerBase
                     if ($itemValidation == null){
                         $series = new SeriesInfo($title, $description, $numberOfSeasons, $imageName);
                         $series->saveSeries();
-                        header("Location: http://localhost/VAII_sem/MVC?c=Home");
+                        header("Location: http://localhost/VAII_sem/MVC?c=Series");
                         die();
                     }else{
                         $item = [];

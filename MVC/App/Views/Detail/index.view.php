@@ -14,9 +14,7 @@
                 //echo '<img src="MVC/public/images/'. $data['item']->getImageName() . '" class="img-thumbnail" alt="Cinque Terre">';
             }else{
                 echo '<img src="MVC/public/images/no_image.png" class="img-thumbnail" alt="Cinque Terre">';
-                //echo '<img src=data:image;base64,' . $data['item']->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
             }
-            //echo '<img src=data:image;base64,' . $data['item']->getImage() . ' class="img-thumbnail" alt="Cinque Terre">';
             ?>
             <?php
             if ($_GET['type'] == 'm'){

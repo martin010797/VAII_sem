@@ -60,10 +60,6 @@ class DetailController extends AControllerBase
         if (isset($_POST['submit'])) {
             $imageName = $_FILES['image']['name'];
 
-            /*$image = addslashes($_FILES['image']['tmp_name']);
-            $image = file_get_contents($image);
-            $image = base64_encode($image);*/
-
             $title = $_POST["title"];
             $description = $_POST["popis_prvku"];
 
@@ -77,7 +73,8 @@ class DetailController extends AControllerBase
                     $movie = new MovieInfo($title, $description, $duration, $imageName);
                     $movie->setId($_POST["id"]);
                     $movie->editMovie();
-                    header("Location: http://localhost/VAII_sem/MVC?c=Movies");
+                    $this->redirect('?c=Detail&id=' . $_POST['id'] . '&type=m');
+                    header("Location: http://localhost/VAII_sem/MVC?c=Detail&id=" . $_POST['id'] . "&type=m");
                     die();
                 } else {
                     $item = MovieInfo::getOne($_GET['id'], "item_id");
@@ -95,7 +92,8 @@ class DetailController extends AControllerBase
                     $series = new SeriesInfo($title, $description, $numberOfSeasons, $imageName);
                     $series->setItemId($_POST["id"]);
                     $series->editSeries();
-                    header("Location: http://localhost/VAII_sem/MVC?c=Series");
+                    header("Location: http://localhost/VAII_sem/MVC?c=Detail&id=" . $_POST['id'] . "&type=s");
+                    //header("Location: http://localhost/VAII_sem/MVC?c=Series");
                     die();
                 } else {
                     $item = SeriesInfo::getOne($_GET['id'], "item_id");
