@@ -9,6 +9,7 @@ class MySeries {
             let data = await response.json();
 
             var series = document.getElementById('series-list');
+            var randomButton = document.getElementById('randomButton');
             var html = '';
             var rw = 0;
             var firstTime = true;
@@ -17,6 +18,7 @@ class MySeries {
                 if ((rw === 5) || (firstTime === true)){
                     //zaciatok
                     html += `<div class="row bg-secondary text-light">`;
+                    randomButton.hidden = false;
                     if (firstTime === false){
                         rw = 1;
                     }

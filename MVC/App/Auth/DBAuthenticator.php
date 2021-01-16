@@ -16,6 +16,9 @@ class DBAuthenticator extends AAuthenticator
 
     function login($userLogin, $pass)
     {
+        //toto je nespravne kvoli sql injections
+        //$foundUser = User::getAllWhere("email = '$userLogin'");
+        //vyhnutie sa sql injections
         $foundUser = User::getAllWhere("email = ?",[$userLogin]);
 
         if (count($foundUser) == 1){

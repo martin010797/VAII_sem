@@ -27,4 +27,16 @@ class MoviesController extends AControllerBase
     public function jsonMovies(){
         return $this->json(MyMovies::getAllWhere("user_id = ?",[$_SESSION["user"]->getUserId()]));
     }
+
+    public function randomMovieFromList(){
+        $allItems = MyMovies::getAllWhere("user_id = ?",[$_SESSION["user"]->getUserId()]);
+        $size = sizeof($allItems);
+        if ($size > 0){
+            $item = $allItems[rand(0,($size-1))];
+            $id = $item->getId();
+            return $this->redirect('?c=Detail&id=' . $id . '&type=m');
+        }else{
+            return $this->redirect('?c=Movies&a=mymovies');
+        }
+    }
 }
