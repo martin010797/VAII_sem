@@ -1,5 +1,8 @@
 body{
-    background-color: lightgrey;
+    background-image: linear-gradient(to bottom right, #666699 0%, #ffffff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 footer{
     background-color: skyblue;
@@ -40,4 +43,16 @@ a:hover{
 img{
     max-height: 250px;
     width: auto;
+}
+#itemField{
+    background: linear-gradient(to bottom right, #666699 50%, #336699 100%)
+}
+
+.border{
+    border: 1px solid black!important;
+}
+
+.img-thumbnail{
+    background-color: black;
+    border: 1px solid black;
 }

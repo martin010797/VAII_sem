@@ -1,11 +1,11 @@
 <?php
 /** @var \App\Core\AAuthenticator $auth */
 ?>
-<link rel="stylesheet" href="http://localhost/VAII_SEM/MVC/public/css/item_detail_style.css">
+<link rel="stylesheet" href="MVC/public/css/item_detail_style.css">
 
 <div class="container shadow">
     <div class="row bg-secondary text-light">
-        <div class="col-md-3 border pt-3 text-center">
+        <div id="itemField" class="col-md-3 border pt-3 text-center">
             <?php
             /** @var \App\MovieInfo $data */
             if (!is_null($data['item']->getImageName())){
@@ -39,7 +39,7 @@
 
         </div>
 
-        <div class="col-md-2 border pt-3 text-center pb-3">
+        <div id="itemField" class="col-md-2 border pt-3 text-center pb-3">
             <?php
             $typ = $_GET['type'];
             $id = $_GET['id'];

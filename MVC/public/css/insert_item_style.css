@@ -1,5 +1,8 @@
 body{
-    background-color: lightgrey;
+    background-image: linear-gradient(to bottom right, #666699 0%, #ffffff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 .form-inline .btn{
     background-color: dodgerblue;

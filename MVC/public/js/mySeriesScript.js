@@ -24,7 +24,7 @@ class MySeries {
                     }
                     firstTime = false;
                 }
-                html += `<div class="col-md border pt-3">`;
+                html += `<div id="itemField" class="col-md border pt-3">`;
                 if (series.image_name != null){
                     html += `<img src="MVC/public/images/${series.image_name}" class="img-thumbnail" onerror="this.onerror=null; this.src='MVC/public/images/no_image.png'" alt="">`;
                     //html += `<img src="MVC/public/images/${series.image_name}" class="img-thumbnail" alt="Cinque Terre">`

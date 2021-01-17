@@ -1,7 +1,7 @@
 <?php
 /** @var Array $data */
 ?>
-<link rel="stylesheet" href="http://localhost/VAII_SEM/MVC/public/css/login_reg_style.css">
+<link rel="stylesheet" href="MVC/public/css/login_reg_style.css">
 
 <div id="loginRegContainer" class="container shadow-lg">
     <h2 class="text-center">Prihlásenie</h2>

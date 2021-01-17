@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="http://localhost/VAII_SEM/MVC/public/css/main_page_style.css">
+<link rel="stylesheet" href="MVC/public/css/main_page_style.css">
 
 <div class="container-fluid pt-3 pb-5">
     <h2>Filmy</h2>
@@ -18,7 +18,7 @@
                 $firstTime = false;
             }
 
-            echo '<div class="col-md border pt-3">';
+            echo '<div id="itemField" class="col-md border pt-3">';
 
             if (!is_null($movie->getImageName())){
                 //echo '<img src="MVC/public/images/'. $movie->getImageName() . '" class="img-thumbnail" alt="Cinque Terre">';

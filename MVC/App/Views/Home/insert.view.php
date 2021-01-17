@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="http://localhost/VAII_SEM/MVC/public/css/insert_item_style.css">
+<link rel="stylesheet" href="MVC/public/css/insert_item_style.css">
 
 <div id="insertItemContainer" class="container shadow-lg">
     <h2 class="text-center">Vloženie prvku</h2>

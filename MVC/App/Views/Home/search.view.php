@@ -1,6 +1,6 @@
 
 
-<link rel="stylesheet" href="http://localhost/VAII_SEM/MVC/public/css/main_page_style.css">
+<link rel="stylesheet" href="MVC/public/css/main_page_style.css">
 
 <div class="container pt-3 pb-5">
     <h2>Výsledky vyhľadávania</h2>
@@ -20,7 +20,7 @@
             $firstTime = false;
         }
 
-        echo '<div class="col-md border pt-3">';
+        echo '<div id="itemField" class="col-md border pt-3">';
 
         if (!is_null($movie->getImageName())){
             $name = "'MVC/public/images/no_image.png'";
@@ -50,7 +50,7 @@
             $firstTime = false;
         }
 
-        echo '<div class="col-md border pt-3">';
+        echo '<div id="itemField" class="col-md border pt-3">';
 
         if (!is_null($series->getImageName())){
             $name = "'MVC/public/images/no_image.png'";

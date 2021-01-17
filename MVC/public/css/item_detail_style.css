@@ -1,5 +1,8 @@
 body{
-    background-color: lightgray;
+    background-image: linear-gradient(to bottom right, #666699 0%, #ffffff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 .form-inline .btn{
     background-color: dodgerblue;
@@ -17,4 +20,17 @@ body{
         margin-top: 30px;
         margin-bottom: 30px;
     }
+}
+
+#itemField{
+    background: linear-gradient(to bottom right, #666699 50%, #336699 100%)
+}
+
+.border{
+    border: 1px solid black!important;
+}
+
+.img-thumbnail{
+    background-color: black;
+    border: 1px solid black;
 }
