@@ -18,7 +18,7 @@
             $firstTime = false;
         }
 
-        echo '<div id="itemField" class="col-md border pt-3">';
+        echo '<div class="col-md border pt-3">';
 
         if (!is_null($series->getImageName())){
             $name = "'MVC/public/images/no_image.png'";

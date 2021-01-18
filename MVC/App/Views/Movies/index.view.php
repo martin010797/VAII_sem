@@ -18,7 +18,7 @@
                 $firstTime = false;
             }
 
-            echo '<div id="itemField" class="col-md border pt-3">';
+            echo '<div class="col-md border pt-3">';
 
             if (!is_null($movie->getImageName())){
                 //echo '<img src="MVC/public/images/'. $movie->getImageName() . '" class="img-thumbnail" alt="Cinque Terre">';

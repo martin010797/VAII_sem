@@ -5,7 +5,7 @@
 
 <div class="container shadow">
     <div class="row bg-secondary text-light">
-        <div id="itemField" class="col-md-3 border pt-3 text-center">
+        <div class="col-md-3 border pt-3 text-center">
             <?php
             /** @var \App\MovieInfo $data */
             if (!is_null($data['item']->getImageName())){
@@ -39,7 +39,7 @@
 
         </div>
 
-        <div id="itemField" class="col-md-2 border pt-3 text-center pb-3">
+        <div class="col-md-2 border pt-3 text-center pb-3">
             <?php
             $typ = $_GET['type'];
             $id = $_GET['id'];

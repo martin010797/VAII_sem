@@ -44,7 +44,8 @@ img{
     max-height: 250px;
     width: auto;
 }
-#itemField{
+
+.col-md{
     background: linear-gradient(to bottom right, #666699 50%, #336699 100%)
 }
 

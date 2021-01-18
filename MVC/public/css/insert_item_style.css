@@ -7,9 +7,6 @@ body{
 .form-inline .btn{
     background-color: dodgerblue;
 }
-#titlesOfForm{
-    font-weight: bold;
-}
 #insertItemContainer{
     background-color: skyblue;
     width: 600px;

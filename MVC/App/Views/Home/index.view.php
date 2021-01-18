@@ -15,7 +15,7 @@
         <?php
         /** @var \App\MovieInfo $data */
         foreach ($data['movie'] as $movie) {
-            echo '<div id="itemField" class="col-md border pt-3">';
+            echo '<div class="col-md border pt-3">';
 
             if (!is_null($movie->getImageName())){
                 $name = "'MVC/public/images/no_image.png'";
@@ -42,7 +42,7 @@
         <?php
         /** @var \App\SeriesInfo $data */
         foreach ($data['series'] as $series) {
-            echo '<div id="itemField" class="col-md border pt-3">';
+            echo '<div class="col-md border pt-3">';
 
             if (!is_null($series->getImageName())){
                 $name = "'MVC/public/images/no_image.png'";

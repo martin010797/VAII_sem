@@ -22,7 +22,11 @@ body{
     }
 }
 
-#itemField{
+.col-md-2{
+    background: linear-gradient(to bottom right, #666699 50%, #336699 100%)
+}
+
+.col-md-3{
     background: linear-gradient(to bottom right, #666699 50%, #336699 100%)
 }
 

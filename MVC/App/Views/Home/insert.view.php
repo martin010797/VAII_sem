@@ -8,29 +8,29 @@
         /** @var Array[] $data */
         if ($data == null) {
             ?>
-            <div id="titlesOfForm">
-                Názov
+            <div>
+                <b>Názov</b>
             </div>
             <input required type="text" class="form-control mb-2" name="title" placeholder="Vlož názov">
 
-            <div id="titlesOfForm">
-                Popis
+            <div>
+                <b>Popis</b>
             </div>
             <textarea class="form-control" id="popis_prvku" name="popis_prvku" rows="3" placeholder="Vlož popis"></textarea>
 
-            <div id="titlesOfForm">
-                Dĺžka trvania
-            </div id="titlesOfForm">
+            <div>
+                <b>Dĺžka trvania</b>
+            </div>
             <input type="text" name="duration" class="form-control mb-2" placeholder="Vlož dĺžku trvania (film)">
-            <div id="titlesOfForm">
-                Počet sérií
+            <div>
+                <b>Počet sérií</b>
             </div>
             <input type="text" name="numbOfSe" class="form-control mb-2" placeholder="Vlož počet sérií (seriál)">
 
             <input type="radio" name="type" value="m" checked>Film
             <input type="radio" name="type" value="s">Seriál
-            <div id="titlesOfForm">
-                Obrázok
+            <div>
+                <b>Obrázok</b>
             </div>
             <input required type="file" name="image"/>
 
@@ -40,8 +40,8 @@
             <?php
         } else {
             ?>
-            <div id="titlesOfForm">
-                Názov
+            <div>
+                <b>Názov</b>
             </div>
             <input required type="text" class="form-control mb-2" name="title" placeholder="Vlož názov"
                    value='<?= $data[0][0] ?>'>
@@ -54,8 +54,8 @@
                 <?php }
             } ?>
 
-            <div id="titlesOfForm">
-                Popis
+            <div>
+                <b>Popis</b>
             </div>
             <textarea class="form-control" id="popis_prvku" name="popis_prvku" rows="3"><?= $data[0][1] ?></textarea>
             <?php if (isset($data[1][1])) {
@@ -67,8 +67,8 @@
                 <?php }
             } ?>
 
-            <div id="titlesOfForm">
-                Dĺžka trvania
+            <div>
+                <b>Dĺžka trvania</b>
             </div>
             <input type="text" name="duration" class="form-control mb-2" placeholder="Vlož dĺžku trvania (film)"
                    value='<?php
@@ -85,8 +85,8 @@
 
                 <?php }
             } ?>
-            <div id="titlesOfForm">
-                Počet sérií
+            <div>
+                <b>Počet sérií</b>
             </div>
             <input type="text" name="numbOfSe" class="form-control mb-2" placeholder="Vlož počet sérií (seriál)"
                    value='<?php
@@ -113,8 +113,8 @@
                 echo 'checked';
             }
             ?>>Seriál
-            <div id="titlesOfForm">
-                Obrázok
+            <div>
+                <b>Obrázok</b>
             </div>
             <input required type="file" name="image"/>
 
