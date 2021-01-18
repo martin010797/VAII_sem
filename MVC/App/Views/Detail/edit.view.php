@@ -12,8 +12,8 @@
         } else {
             echo $data[0]->getId();
         } ?>" name="id">
-        <div id="titlesOfForm">
-            Názov
+        <div>
+            <b>Názov</b>
         </div>
         <input required type="text" class="form-control mb-2" name="title" placeholder="Vlož názov" value="<?= $data[0]->getTitle() ?>">
         <?php if (isset($data[1][0])) {
@@ -26,8 +26,8 @@
             <?php }
         } ?>
 
-        <div id="titlesOfForm">
-            Popis
+        <div>
+            <b>Popis</b>
         </div>
         <textarea class="form-control" id="popis_prvku" name="popis_prvku" rows="3"><?= $data[0]->getDescription() ?></textarea>
         <?php if (isset($data[1][1])) {
@@ -38,8 +38,8 @@
                 </div>
             <?php }
         } ?>
-        <div id="titlesOfForm">
-            Dĺžka trvania
+        <div>
+            <b>Dĺžka trvania</b>
         </div>
         <input type="text" class="form-control mb-2" name="duration" placeholder="Vlož dĺžku trvania (film)" value="<?php
         if ($data[0]->getType() == "m") {
@@ -56,8 +56,8 @@
 
             <?php }
         } ?>
-        <div id="titlesOfForm">
-            Počet sérií
+        <div>
+            <b>Počet sérií</b>
         </div>
         <input type="text" class="form-control mb-2" name="numbOfSe" placeholder="Vlož počet sérií (seriál)" value="<?php
         if ($data[0]->getType() == "s") {
@@ -83,8 +83,8 @@
             echo 'checked';
         }
         ?>>
-        <div id="titlesOfForm">
-            Obrázok
+        <div>
+            <b>Obrázok</b>
         </div>
         <input required type="file" name="image"/>
 

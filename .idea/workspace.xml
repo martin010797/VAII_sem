@@ -27,6 +27,7 @@
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Home/search.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Home/search.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Movies/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Movies/index.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/App/Views/Series/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/App/Views/Series/index.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/public/css/insert_item_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/public/css/insert_item_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/public/css/item_detail_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/public/css/item_detail_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/public/css/main_page_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/public/css/main_page_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/public/js/myMoviesScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/public/js/myMoviesScript.js" afterDir="false" />
@@ -117,7 +118,7 @@
       <workItem from="1610787393632" duration="14876000" />
       <workItem from="1610877441202" duration="5663000" />
       <workItem from="1610887516089" duration="1309000" />
-      <workItem from="1610975540913" duration="1670000" />
+      <workItem from="1610975540913" duration="1982000" />
     </task>
     <servers />
   </component>
